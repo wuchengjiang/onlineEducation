@@ -1,5 +1,4 @@
-from django.db import models
-
+#coding=utf-8
 from datetime import datetime
 
 from django.db import models
@@ -29,7 +28,6 @@ class Course(models.Model):
     def __str__(self):
         return self.name
 
-
 class Lesson(models.Model):
     course = models.ForeignKey(Course,verbose_name='课程',on_delete=models.CASCADE)
     name = models.CharField("章节名",max_length=100)
@@ -42,6 +40,15 @@ class Lesson(models.Model):
     def __str__(self):
         return '《{0}》课程的章节 >> {1}'.format(self.course, self.name)
 
+class Video(models.Model):
+    lesson = models.ForeignKey(Lesson, verbose_name="章节",on_delete=models.CASCADE)
+    name = models.CharField("视频名",max_length=100)
+    add_time = models.DateTimeField("添加时间", default=datetime.now)
+
+    class Meta:
+        verbose_name = "视频"
+        verbose_name_plural = verbose_name
+
 
 class CourseResource(models.Model):
     course = models.ForeignKey(Course, verbose_name="课程",on_delete=models.CASCADE)
@@ -52,45 +59,3 @@ class CourseResource(models.Model):
     class Meta:
         verbose_name = "课程资源"
         verbose_name_plural = verbose_name
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
