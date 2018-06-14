@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'operations',
     'xadmin',
     'crispy_forms',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -145,3 +146,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR,'static'),
 )
+
+EMAIL_HOST="smtp.sina.com"
+EMAIL_PORT=25
+EMAIL_HOST_USER="donnie0918@sina.com"
+EMAIL_HOST_PASSWORD="13886025938qq"
+EMAIL_USER_TLS=True
+EMAIL_FROM="donnie0918@sina.com"
+
+
+
