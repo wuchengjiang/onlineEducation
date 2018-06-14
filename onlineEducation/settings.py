@@ -31,7 +31,9 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'users.UserProfile'
 
-
+AUTHENTICATION_BACKENDS=(
+    'users.views.CustomBackend',
+)
 
 
 
@@ -72,7 +74,7 @@ ROOT_URLCONF = 'onlineEducation.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
