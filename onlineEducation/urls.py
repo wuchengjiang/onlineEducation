@@ -17,15 +17,21 @@ Including another URLconf
 from django.urls import path,include,re_path
 import xadmin
 from django.views.generic import TemplateView  #调用静态HTML的时候用这个
-from users.views import LoginView,RegisterView,ActiveUserView
-from django.urls import reverse
+from users.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyView
+
+
+
+
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('',TemplateView.as_view(template_name='index.html'), name='index'),
     path('login/', LoginView.as_view(), name='login'),
     path('register/', RegisterView.as_view(), name='register'),
     path('captcha/',include('captcha.urls')),
-    re_path('active/(?P<active_code>.*)/',ActiveUserView.as_view(),name="user_active")
+    re_path('active/(?P<active_code>.*)/',ActiveUserView.as_view(),name="user_active"),
+    re_path('reset/(?P<reset_code>.*)/',ResetView.as_view(),name="reset_pwd"),
+    path('forgetpwd/',ForgetPwdView.as_view(),name='forget_pwd'),
+    path('modify_pwd/',ModifyView.as_view(),name='modify_pwd'),
 ]
 
 

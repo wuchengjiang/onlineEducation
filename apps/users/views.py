@@ -7,7 +7,7 @@ from django.views.generic.base import View
 from .forms import LoginForm,RegisterForm
 from django.contrib.auth.hashers import make_password
 from utils.email_send import send_register_email
-
+from users.forms import ForgetPwdForm,ModifyPWDForm
 
 class CustomBackend(ModelBackend):
     def authenticate(self, request, username=None, password=None, **kwargs):
@@ -76,11 +76,50 @@ class ActiveUserView(View):
         return render(request,"login.html")
 
 
+class ForgetPwdView(View):
+    def get(self,request):
+        forget_form = ForgetPwdForm()
+        return render(request,'forgetpwd.html',{'forget_form':forget_form})
+
+    def post(self,request):
+        forget_form = ForgetPwdForm(request.POST)
+        if forget_form.is_valid():
+            email = request.POST.get('email',None)
+            send_register_email(email,'forget')
+            return render(request, 'send_success.html')
+        else:
+            return render(request,'forgetpwd.html',{'forget_form':forget_form})
 
 
 
 
+class ResetView(View):
+    def get(self,request,reset_code):
+        all_records=EmailVerifyRecord.objects.filter(code=reset_code)
+        if all_records:
+            for record in all_records:
+                email=record.email
+                return render(request,"password_reset.html",{"email":email})
+        else:
+            return render(request, "active_fail.html")
+        return render(request,"login.html")
 
+class ModifyView(View):
+    def post(self,request):
+        modify_form=ModifyPWDForm(request.POST)
+        pwd2 = request.POST.get("password2", "")
+        if modify_form.is_valid():
+            pwd1=request.POST.get("password1","")
+            email=request.POST.get("email","")
+            if pwd1!=pwd2:
+                return  render(request,"password_reset.html",{"email":email,"msg":"密码不一致"})
+            user=UserProfile.objects.get(email=email)
+            user.password=make_password(pwd2)
+            user.save()
+
+            return render(request,"login.html")
+        else:
+            return render(request,"password_reset.html",{"email":email,"modify_form":modify_form})
 
 
 
