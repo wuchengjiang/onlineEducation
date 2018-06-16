@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bd129af-5427-464c-a8cb-3cd7aab43e45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/apps/organizations/urls.py" afterPath="$PROJECT_DIR$/apps/organizations/urls.py" />
-      <change beforePath="$PROJECT_DIR$/apps/organizations/views.py" afterPath="$PROJECT_DIR$/apps/organizations/views.py" />
       <change beforePath="$PROJECT_DIR$/templates/org_base.html" afterPath="$PROJECT_DIR$/templates/org_base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/apps/organizations/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="897">
-              <caret line="77" column="40" lean-forward="true" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+              <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -32,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="93">
-              <caret line="70" column="10" lean-forward="true" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+              <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#header#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -56,8 +54,8 @@
       <file leaf-file-name="org_base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/org_base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+            <state relative-caret-position="140">
+              <caret line="70" column="54" lean-forward="false" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#header#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -72,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1531">
-              <caret line="78" column="17" lean-forward="true" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+              <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -361,11 +359,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27856365" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27856365" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
@@ -726,7 +723,7 @@
     <entry file="file://$PROJECT_DIR$/apps/organizations/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="897">
-          <caret line="77" column="40" lean-forward="true" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+          <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -734,7 +731,7 @@
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
-          <caret line="70" column="10" lean-forward="true" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+          <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#header#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -745,15 +742,15 @@
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1531">
-          <caret line="78" column="17" lean-forward="true" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+          <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/org_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+        <state relative-caret-position="140">
+          <caret line="70" column="54" lean-forward="false" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#header#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
