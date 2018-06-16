@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 
+
 class CityDict(models.Model):
     name = models.CharField(verbose_name='城市',max_length=20)
     desc = models.CharField('描述',max_length=200)
@@ -50,7 +51,7 @@ class Teacher(models.Model):
     click_nums = models.IntegerField('点击数',default=0)
     fav_nums = models.IntegerField('收藏数',default=0)
     add_time = models.DateTimeField(default=datetime.now)
-
+    image = models.ImageField('头像', upload_to='teacher/%Y/%m', default='',max_length=100)
     class Meta:
         verbose_name = '教师'
         verbose_name_plural = verbose_name
