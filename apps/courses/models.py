@@ -20,10 +20,31 @@ class Course(models.Model):
     image = models.ImageField("封面图",upload_to="courses/%Y/%m",max_length=100)
     click_nums = models.IntegerField("点击数",default=0)
     add_time = models.DateTimeField("添加时间",default=datetime.now,)
+    category = models.CharField("课程类别", max_length=20, default="后端开发")
+    tag = models.CharField('课程标签', default='', max_length=10)
     course_org = models.ForeignKey(CourseOrg, on_delete=models.CASCADE, verbose_name="所属机构", null=True, blank=True)
     class Meta:
         verbose_name = "课程"
         verbose_name_plural = verbose_name
+
+    def get_zj_nums(self):
+        #获取课程的章节数
+        return self.lesson_set.all().count()
+    get_zj_nums.short_description = '章节数'   #在后台显示的名称
+
+    def go_to(self):
+        from django.utils.safestring import mark_safe
+        #mark_safe后就不会转义
+        return mark_safe("<a href='https://home.cnblogs.com/u/derek1184405959/'>跳转</a>")
+    go_to.short_description = "跳转"
+
+    def get_course_lesson(self):
+        #获取课程所有章节
+        return self.lesson_set.all()
+
+    def get_learn_users(self):
+        #获取这门课程的学习用户
+        return self.usercourse_set.all()[:5]
 
     def __str__(self):
         return self.name
