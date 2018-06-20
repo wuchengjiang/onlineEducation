@@ -24,6 +24,8 @@ class Course(models.Model):
     tag = models.CharField('课程标签', default='', max_length=10)
     course_org = models.ForeignKey(CourseOrg, on_delete=models.CASCADE, verbose_name="所属机构", null=True, blank=True)
     teacher = models.ForeignKey(Teacher,on_delete=models.CASCADE,verbose_name='讲师', null=True, blank=True)
+    youneed_know = models.CharField('课程须知', default='', max_length=300)
+    teacher_tell = models.CharField('你能学到什么', default='', max_length=300)
     class Meta:
         verbose_name = "课程"
         verbose_name_plural = verbose_name
