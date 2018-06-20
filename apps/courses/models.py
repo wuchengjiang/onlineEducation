@@ -2,7 +2,7 @@
 from datetime import datetime
 
 from django.db import models
-from organizations.models import CourseOrg
+from organizations.models import CourseOrg,Teacher
 
 class Course(models.Model):
     DEGREE_CHOICES = (
@@ -23,6 +23,7 @@ class Course(models.Model):
     category = models.CharField("课程类别", max_length=20, default="后端开发")
     tag = models.CharField('课程标签', default='', max_length=10)
     course_org = models.ForeignKey(CourseOrg, on_delete=models.CASCADE, verbose_name="所属机构", null=True, blank=True)
+    teacher = models.ForeignKey(Teacher,on_delete=models.CASCADE,verbose_name='讲师', null=True, blank=True)
     class Meta:
         verbose_name = "课程"
         verbose_name_plural = verbose_name
@@ -61,14 +62,22 @@ class Lesson(models.Model):
     def __str__(self):
         return '《{0}》课程的章节 >> {1}'.format(self.course, self.name)
 
+    def get_lesson_vedio(self):
+        return self.video_set.all()
+
 class Video(models.Model):
     lesson = models.ForeignKey(Lesson, verbose_name="章节",on_delete=models.CASCADE)
     name = models.CharField("视频名",max_length=100)
     add_time = models.DateTimeField("添加时间", default=datetime.now)
+    url = models.CharField('访问地址', default='', max_length=200)
+    learn_times = models.IntegerField("学习时长(分钟数)", default=0)
 
     class Meta:
         verbose_name = "视频"
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
 
 
 class CourseResource(models.Model):
@@ -80,3 +89,6 @@ class CourseResource(models.Model):
     class Meta:
         verbose_name = "课程资源"
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
