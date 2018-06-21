@@ -37,7 +37,6 @@ urlpatterns = [
     path("org/", include('organizations.urls', namespace="org")),
     path("course/", include('courses.urls', namespace="course")),
     path("users/", include('users.urls', namespace="users")),
-
 ]
 
 

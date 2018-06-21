@@ -105,7 +105,7 @@ function find_password_form_submit(){
         cache: false,
         type: 'post',
         dataType:'json',
-        url:"/user/password/find/",
+        url:"/users/update/pwd/",
         data:$('#jsFindPwdForm').serialize(),
         async: true,
         beforeSend:function(XMLHttpRequest){
