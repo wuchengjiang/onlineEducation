@@ -35,7 +35,7 @@ class EmailVerifyRecord(models.Model):
 
     code = models.CharField('验证码',max_length=20,null=True,blank=True)
     email = models.EmailField('邮箱',max_length=50,null=True,blank=True)
-    send_type = models.CharField(choices=send_choices,max_length=10,null=True,blank=True)
+    send_type = models.CharField(choices=send_choices,max_length=50,null=True,blank=True)
     send_time = models.DateTimeField(default=datetime.now)
 
     class Meta:

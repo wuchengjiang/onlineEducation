@@ -184,6 +184,20 @@ class SendEmailCodeView(LoginRequiredMixin, View):
 
 
 
+class UpdateEmailView(LoginRequiredMixin, View):
+    '''修改邮箱'''
+    def post(self, request):
+        email = request.POST.get("email", "")
+        code = request.POST.get("code", "")
+
+        existed_records = EmailVerifyRecord.objects.filter(email=email, code=code, send_type='update_email')
+        if existed_records:
+            user = request.user
+            user.email = email
+            user.save()
+            return HttpResponse('{"status":"success"}', content_type='application/json')
+        else:
+            return HttpResponse('{"email":"验证码无效"}', content_type='application/json')
 
 
 
