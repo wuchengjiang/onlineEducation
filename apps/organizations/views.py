@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import View
@@ -18,6 +19,12 @@ class OrgView(View):
         city_id = request.GET.get('city', '')
         category = request.GET.get('ct', '')
         sort = request.GET.get('sort', "")
+        search_keywords = request.GET.get('keywords', '')
+        if search_keywords:
+            # 在name字段进行操作,做like语句的操作。i代表不区分大小写
+            # or操作使用Q
+            all_orgs = all_orgs.filter(Q(name__icontains=search_keywords) | Q(desc__icontains=search_keywords))
+        # 城市筛选
         if category:
             all_orgs = all_orgs.filter(category=category)
         if city_id:
@@ -45,6 +52,8 @@ class OrgView(View):
             "org_nums":org_nums,
             "city_id":city_id,
             'hot_orgs': hot_orgs,
+            'sort':sort,
+            "category": category,
         })
 
 
