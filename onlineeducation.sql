@@ -4,14 +4,14 @@
  Source Server         : Mysql
  Source Server Type    : MySQL
  Source Server Version : 50634
- Source Host           : 192.168.1.101:3306
+ Source Host           : 192.168.1.102:3306
  Source Schema         : onlineeducation
 
  Target Server Type    : MySQL
  Target Server Version : 50634
  File Encoding         : 65001
 
- Date: 20/06/2018 12:12:54
+ Date: 21/06/2018 09:45:56
 */
 
 SET NAMES utf8mb4;
@@ -202,26 +202,29 @@ CREATE TABLE `courses_course`  (
   `tag` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `course_org_id` int(11) DEFAULT NULL,
   `teacher_id` int(11) DEFAULT NULL,
+  `teacher_tell` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `youneed_know` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `courses_course_course_org_id_4d2c4aab_fk_organizat`(`course_org_id`) USING BTREE,
   INDEX `courses_course_teacher_id_846fa526_fk_organizations_teacher_id`(`teacher_id`) USING BTREE,
   CONSTRAINT `courses_course_course_org_id_4d2c4aab_fk_organizat` FOREIGN KEY (`course_org_id`) REFERENCES `organizations_courseorg` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `courses_course_teacher_id_846fa526_fk_organizations_teacher_id` FOREIGN KEY (`teacher_id`) REFERENCES `organizations_teacher` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of courses_course
 -- ----------------------------
-INSERT INTO `courses_course` VALUES (1, 'Donnie', 'xxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxx', 'zj', 13, 13, 31, 'courses/2018/06/bjdx_cCpdUw8.jpg', 0, '2018-06-15 15:26:00.000000', '后端开发', '', 1, NULL);
-INSERT INTO `courses_course` VALUES (2, 'java', 'java开发', 'java开发', 'zj', 111, 111, 111, 'courses/2018/06/bjdx_cCpdUw8_F0PccEu.jpg', 12, '2018-06-16 08:32:00.000000', '后端开发', 'java', 2, NULL);
-INSERT INTO `courses_course` VALUES (3, 'Python开发', 'Python开发', 'Python开发', 'gj', 12, 122, 1212, 'courses/2018/06/imooc_Gn1sRjp.png', 12, '2018-06-16 08:32:00.000000', '后端开发', '', 4, NULL);
-INSERT INTO `courses_course` VALUES (4, '招投标项目开发', '武汉市', '大后天你这人也没人要慢慢', 'zj', 12, 12, 12, 'courses/2018/06/bjdx_cCpdUw8_762aLjX.jpg', 12, '2018-06-16 08:47:00.000000', '后端开发', '', 1, NULL);
-INSERT INTO `courses_course` VALUES (5, 'django课程', 'django课程', 'django课程', 'gj', 121, 121, 121, 'courses/2018/06/qhdx-logo.png', 12, '2018-06-16 17:41:00.000000', '后端开发', 'java', 1, NULL);
-INSERT INTO `courses_course` VALUES (6, 'demo1', 'demo1', 'demo1', 'zj', 12, 12, 12, 'courses/2018/06/qhdx-logo_TLwBVJS.png', 11, '2018-06-16 17:42:00.000000', '后端开发', '', 3, NULL);
-INSERT INTO `courses_course` VALUES (7, 'java++++', 'java++++', 'java++++', 'cj', 11, 33, 44, 'courses/2018/06/imooc_Y2Tonsq.png', 44, '2018-06-16 17:42:00.000000', '后端开发', 'java', 2, NULL);
-INSERT INTO `courses_course` VALUES (8, 'js', 'js', 'js', 'cj', 121, 121, 121, 'courses/2018/06/qhdx-logo_T7wmmyR.png', 1, '2018-06-16 17:43:00.000000', '后端开发', 'java', 3, NULL);
-INSERT INTO `courses_course` VALUES (9, '121', '121', '3131', 'zj', 13, 131, 33, 'courses/2018/06/bjdx.jpg', 13, '2018-06-16 17:43:00.000000', '后端开发', 'java', 4, NULL);
-INSERT INTO `courses_course` VALUES (10, '11444', '141414', '1414141', 'cj', 14, 14, 41, 'courses/2018/06/qhdx-logo_MG2ahnm.png', 14, '2018-06-16 17:43:00.000000', '后端开发', '', 5, NULL);
+INSERT INTO `courses_course` VALUES (1, 'Donnie', 'xxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxx', 'zj', 13, 13, 31, 'courses/2018/06/bjdx_cCpdUw8.jpg', 0, '2018-06-15 15:26:00.000000', '后端开发', '', 1, NULL, '', '');
+INSERT INTO `courses_course` VALUES (2, 'java', 'java开发', 'java开发', 'zj', 111, 138, 111, 'courses/2018/06/57a801860001c34b12000460_xowDuhR.png', 12, '2018-06-16 08:32:00.000000', '后端开发', 'java', 2, 1, '全栈开发,所向披露', 'python基础你必须要会哦!!!!!');
+INSERT INTO `courses_course` VALUES (3, 'Python开发', 'Python开发', 'Python开发', 'gj', 12, 122, 1212, 'courses/2018/06/imooc_Gn1sRjp.png', 12, '2018-06-16 08:32:00.000000', '后端开发', '', 4, NULL, '', '');
+INSERT INTO `courses_course` VALUES (4, '招投标项目开发', '武汉市', '大后天你这人也没人要慢慢', 'zj', 12, 12, 12, 'courses/2018/06/bjdx_cCpdUw8_762aLjX.jpg', 12, '2018-06-16 08:47:00.000000', '后端开发', '', 1, NULL, '', '');
+INSERT INTO `courses_course` VALUES (5, 'django课程', 'django课程', 'django课程', 'gj', 121, 121, 121, 'courses/2018/06/qhdx-logo.png', 12, '2018-06-16 17:41:00.000000', '后端开发', 'java', 1, NULL, '', '');
+INSERT INTO `courses_course` VALUES (6, 'demo1', 'demo1', 'demo1', 'zj', 12, 13, 12, 'courses/2018/06/qhdx-logo_TLwBVJS.png', 11, '2018-06-16 17:42:00.000000', '后端开发', '', 3, NULL, '', '');
+INSERT INTO `courses_course` VALUES (7, 'java++++', 'java++++', 'java++++', 'cj', 11, 35, 44, 'courses/2018/06/imooc_Y2Tonsq.png', 44, '2018-06-16 17:42:00.000000', '后端开发', 'java', 2, NULL, '', '');
+INSERT INTO `courses_course` VALUES (8, 'js', 'js', 'js', 'cj', 121, 121, 121, 'courses/2018/06/qhdx-logo_T7wmmyR.png', 1, '2018-06-16 17:43:00.000000', '后端开发', 'java', 3, NULL, '', '');
+INSERT INTO `courses_course` VALUES (9, '121', '121', '3131', 'zj', 13, 131, 33, 'courses/2018/06/bjdx.jpg', 13, '2018-06-16 17:43:00.000000', '后端开发', 'java', 4, NULL, '', '');
+INSERT INTO `courses_course` VALUES (10, '11444', '141414', '1414141', 'cj', 14, 16, 41, 'courses/2018/06/qhdx-logo_MG2ahnm.png', 14, '2018-06-16 17:43:00.000000', '后端开发', '', 5, NULL, '', '');
+INSERT INTO `courses_course` VALUES (11, 'Donnie', '上海市', '1111111111111111111111111111111111111111111111111111', 'gj', 12, 21, 32, 'courses/2018/06/4.jpeg', 12, '2018-06-21 09:16:00.000000', '后端开发', '121', 2, 1, '全栈开发,所向披露', 'python基础你必须要会哦!!!!!');
 
 -- ----------------------------
 -- Table structure for courses_courseresource
@@ -236,13 +239,14 @@ CREATE TABLE `courses_courseresource`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `courses_courseresource_course_id_5eba1332_fk_courses_course_id`(`course_id`) USING BTREE,
   CONSTRAINT `courses_courseresource_course_id_5eba1332_fk_courses_course_id` FOREIGN KEY (`course_id`) REFERENCES `courses_course` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of courses_courseresource
 -- ----------------------------
 INSERT INTO `courses_courseresource` VALUES (1, 'Donnie', 'course/resource/2018/06/57a801860001c34b12000460_Q027qUt.png', '2018-06-20 11:39:00.000000', 2);
 INSERT INTO `courses_courseresource` VALUES (2, 'general user', 'course/resource/2018/06/4.jpeg', '2018-06-20 11:39:00.000000', 2);
+INSERT INTO `courses_courseresource` VALUES (3, 'Donnie', 'course/resource/2018/06/4_Ywg2E9E.jpeg', '2018-06-20 18:08:00.000000', 2);
 
 -- ----------------------------
 -- Table structure for courses_lesson
@@ -285,7 +289,7 @@ CREATE TABLE `courses_video`  (
 -- Records of courses_video
 -- ----------------------------
 INSERT INTO `courses_video` VALUES (1, 'Donnie', '2018-06-20 11:38:00.000000', 'https://www.bilibili.com/video/av25095100/', 12, 1);
-INSERT INTO `courses_video` VALUES (2, 'Donnie', '2018-06-20 11:38:00.000000', 'https://www.bilibili.com/video/av25095100/', 0, 1);
+INSERT INTO `courses_video` VALUES (2, 'Donnie', '2018-06-20 11:38:00.000000', 'https://www.bilibili.com/video/av25095100/', 10, 1);
 INSERT INTO `courses_video` VALUES (3, 'general user', '2018-06-20 11:38:00.000000', 'http://www.360doc.com/content/13/0615/08/11675837_292965677.shtml', 12, 2);
 INSERT INTO `courses_video` VALUES (4, '招投标项目开发', '2018-06-20 11:38:00.000000', 'http://www.360doc.com/content/13/0615/08/11675837_292965677.shtml', 12, 3);
 
@@ -360,7 +364,7 @@ CREATE TABLE `django_migrations`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 37 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 38 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of django_migrations
@@ -391,6 +395,7 @@ INSERT INTO `django_migrations` VALUES (26, 'organizations', '0003_auto_20180615
 INSERT INTO `django_migrations` VALUES (28, 'organizations', '0004_teacher_image', '2018-06-16 09:05:54.208705');
 INSERT INTO `django_migrations` VALUES (35, 'courses', '0001_initial', '2018-06-20 11:33:39.935391');
 INSERT INTO `django_migrations` VALUES (36, 'operations', '0001_initial', '2018-06-20 12:05:42.600369');
+INSERT INTO `django_migrations` VALUES (37, 'courses', '0002_auto_20180620_1434', '2018-06-20 14:35:00.764313');
 
 -- ----------------------------
 -- Table structure for django_session
@@ -408,7 +413,7 @@ CREATE TABLE `django_session`  (
 -- Records of django_session
 -- ----------------------------
 INSERT INTO `django_session` VALUES ('dxoldvi0pnjvuq8bho8xprvxdp1wlqyl', 'ODM1ZTI4MmI2MTFhOTA4ODFhODcwOWE3ZDkxZTdlMWNhOWY4ZTBmZjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXNlcnMudmlld3MuQ3VzdG9tQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImMxMDZiY2Y0MjIwNTU0NjE5ZDY0MThmNmVjMzJhYTcxMWY2ZjEzMzgiLCJMSVNUX1FVRVJZIjpbWyJjb3Vyc2VzIiwiY291cnNlIl0sIiJdfQ==', '2018-06-30 19:31:50.415459');
-INSERT INTO `django_session` VALUES ('qzn8jj5v1weo6a49qhjfg77vfvwojvfy', 'MmRhNWUzODQ3NWM4OTBjMGQ3YjgzYTNkNmMwYjk1ZDJlMDg3N2EwYjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXNlcnMudmlld3MuQ3VzdG9tQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImMxMDZiY2Y0MjIwNTU0NjE5ZDY0MThmNmVjMzJhYTcxMWY2ZjEzMzgiLCJMSVNUX1FVRVJZIjpbWyJjb3Vyc2VzIiwiY291cnNlcmVzb3VyY2UiXSwiIl19', '2018-07-04 11:39:36.943185');
+INSERT INTO `django_session` VALUES ('hk80oxki7q3ax90nei2wlg22u68w07e6', 'MTljZmIwOGFlNGM4ZmU3YzhjMTEzMWRmYWQ5YmVhYzA3NTRkZmVhMDp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXNlcnMudmlld3MuQ3VzdG9tQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImMxMDZiY2Y0MjIwNTU0NjE5ZDY0MThmNmVjMzJhYTcxMWY2ZjEzMzgiLCJMSVNUX1FVRVJZIjpbWyJjb3Vyc2VzIiwiY291cnNlIl0sIl9yZWxfdGVhY2hlcl9faWRfX2V4YWN0PTEiXX0=', '2018-07-05 09:17:02.248044');
 
 -- ----------------------------
 -- Table structure for operations_coursecomments
@@ -425,7 +430,19 @@ CREATE TABLE `operations_coursecomments`  (
   INDEX `operations_coursecom_user_id_84597521_fk_users_use`(`user_id`) USING BTREE,
   CONSTRAINT `operations_coursecom_course_id_de0f98da_fk_courses_c` FOREIGN KEY (`course_id`) REFERENCES `courses_course` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `operations_coursecom_user_id_84597521_fk_users_use` FOREIGN KEY (`user_id`) REFERENCES `users_userprofile` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of operations_coursecomments
+-- ----------------------------
+INSERT INTO `operations_coursecomments` VALUES (1, '111111', '2018-06-20 16:45:19.726488', 2, 3);
+INSERT INTO `operations_coursecomments` VALUES (2, '222', '2018-06-20 16:45:44.340952', 2, 3);
+INSERT INTO `operations_coursecomments` VALUES (3, '123', '2018-06-20 16:48:07.021743', 2, 3);
+INSERT INTO `operations_coursecomments` VALUES (4, '1111', '2018-06-20 16:49:35.807974', 2, 3);
+INSERT INTO `operations_coursecomments` VALUES (5, '123', '2018-06-20 16:55:50.731313', 2, 3);
+INSERT INTO `operations_coursecomments` VALUES (6, 'qwe', '2018-06-20 16:55:54.908989', 2, 3);
+INSERT INTO `operations_coursecomments` VALUES (7, '完全很棒', '2018-06-20 17:16:15.729698', 2, 3);
+INSERT INTO `operations_coursecomments` VALUES (8, '123', '2018-06-20 17:17:23.108037', 2, 3);
 
 -- ----------------------------
 -- Table structure for operations_userask
@@ -438,7 +455,17 @@ CREATE TABLE `operations_userask`  (
   `course_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `add_time` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of operations_userask
+-- ----------------------------
+INSERT INTO `operations_userask` VALUES (1, '招投标项目开发', '13080681956', 'ddd', '2018-06-20 15:01:32.623707');
+INSERT INTO `operations_userask` VALUES (2, '招投标项目开发', '13080681956', 'ddd', '2018-06-20 15:01:32.625734');
+INSERT INTO `operations_userask` VALUES (3, '招投标项目开发', '13080681956', 'ddd', '2018-06-20 15:01:32.621713');
+INSERT INTO `operations_userask` VALUES (4, 'Donnie', '13080681956', '`23', '2018-06-21 09:19:24.510516');
+INSERT INTO `operations_userask` VALUES (5, 'Donnie', '13080681956', '`23', '2018-06-21 09:19:24.512509');
+INSERT INTO `operations_userask` VALUES (6, 'Donnie', '13080681956', '`23', '2018-06-21 09:19:24.513506');
 
 -- ----------------------------
 -- Table structure for operations_usercourse
@@ -454,7 +481,20 @@ CREATE TABLE `operations_usercourse`  (
   INDEX `operations_usercourse_user_id_d33454be_fk_users_userprofile_id`(`user_id`) USING BTREE,
   CONSTRAINT `operations_usercourse_course_id_a9f30cc6_fk_courses_course_id` FOREIGN KEY (`course_id`) REFERENCES `courses_course` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `operations_usercourse_user_id_d33454be_fk_users_userprofile_id` FOREIGN KEY (`user_id`) REFERENCES `users_userprofile` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of operations_usercourse
+-- ----------------------------
+INSERT INTO `operations_usercourse` VALUES (1, '2018-06-20 18:02:00.000000', 4, 3);
+INSERT INTO `operations_usercourse` VALUES (2, '2018-06-20 18:02:00.000000', 3, 3);
+INSERT INTO `operations_usercourse` VALUES (3, '2018-06-20 18:02:00.000000', 8, 3);
+INSERT INTO `operations_usercourse` VALUES (4, '2018-06-20 18:06:00.000000', 2, 3);
+INSERT INTO `operations_usercourse` VALUES (5, '2018-06-20 18:11:00.000000', 2, 7);
+INSERT INTO `operations_usercourse` VALUES (6, '2018-06-20 18:11:00.000000', 3, 7);
+INSERT INTO `operations_usercourse` VALUES (7, '2018-06-20 19:57:40.108956', 6, 3);
+INSERT INTO `operations_usercourse` VALUES (8, '2018-06-20 19:57:59.360460', 10, 3);
+INSERT INTO `operations_usercourse` VALUES (9, '2018-06-20 19:58:23.790119', 7, 3);
 
 -- ----------------------------
 -- Table structure for operations_userfavorite
@@ -534,7 +574,7 @@ CREATE TABLE `organizations_courseorg`  (
 -- ----------------------------
 INSERT INTO `organizations_courseorg` VALUES (1, '1', '老男孩教育隶属于北京一天天教育科技有限公司，旗下有两大业务，老男孩linux培训和IT项目服务部，是国内唯一专注于Linux系统及架构师实战方向高端的培训机构与项目外包的企业，公司一方面致力于为国内国际大中型互联网企业培养急需的系统工程师，高级架构师，系统开发工程师等职位，一方面为企业提供企业级的各类高端技术培训，技术咨询，技术流程，技术规划，技术架构及调优方案，并参与实施于后期维护，把互联网的成熟技术经验带到传统行业领域。\r\n\r\n      公司在IT培训方面教学理念先进，方法独特，其中的4项学习思想方针（目标、方法、努力、坚持）和6重教学理念（重目标、重思路、重方法、重实践、重习惯、重总结）已深入广大IT网友及所有学员的内心，逐步形成了互联网IT行业内教育经典。\r\n\r\n      截止到目前累计已培养数千VIP学生，间接影响百万的IT群体，毕业生平均工资在毕业一年内平均12K以上，老男孩培训的学生已经遍布于很多就职于北京大部分知名互联网企业，小米手机，京东商城，蓝讯，快网，淘宝，阿里，支付宝，新浪网，搜狐，腾讯，58同城，赶集，和讯，世纪佳缘，当当网，中国移动，中国联通等，也有很多在中小公司任核心运维及运维经理总监职位（寻医问药总监，互动百科总监，盈科律云总监，合力金桥总监等，），累计为行内其他的培训机构讲师深入培训20人以上。', 71, 1112, 'org/201806/qhdx-logo.png', '北京', '2018-06-15 09:41:00.000000', 4, 'gx', 9, 0);
 INSERT INTO `organizations_courseorg` VALUES (2, '2', '传智播客', 16, 33, 'org/2018/06/njdx.jpg', '湖北', '2018-06-15 09:50:00.000000', 3, 'gx', 9, 0);
-INSERT INTO `organizations_courseorg` VALUES (3, '3', '文都', 232, 4444, 'org/2018/06/bjdx.jpg', '湖北', '2018-06-15 09:51:00.000000', 1, 'gr', 1111111111, 0);
+INSERT INTO `organizations_courseorg` VALUES (3, '3', '文都', 233, 4444, 'org/2018/06/bjdx.jpg', '湖北', '2018-06-15 09:51:00.000000', 1, 'gr', 1111111111, 0);
 INSERT INTO `organizations_courseorg` VALUES (4, '4', '培训', 3333, 33, 'org/2018/06/imooc_Gn1sRjp.png', '湖北', '2018-06-15 09:52:00.000000', 2, 'gr', 9, 0);
 INSERT INTO `organizations_courseorg` VALUES (5, '5', '黑马', 3, 1, 'org/2018/06/bjdx_cCpdUw8.jpg', '湖北', '2018-06-15 09:55:00.000000', 2, 'gr', 9, 0);
 INSERT INTO `organizations_courseorg` VALUES (6, '6', '北京大学（Peking University）简称“北大”，诞生于1898年，初名京师大学堂，是中国近代第一所国立大学，也是最早以“大学”之名创办的学校，其成立标志着中国近代高等教育的开端。北大是中国近代以来唯一以国家最高学府身份创立的学校，最初也是国家最高教育行政机关，行使教育部职能，统管全国教育。北大催生了中国最早的现代学制，开创了中国最早的文科、理科、社科、农科、医科等大学学科，是近代以来中国高等教育的奠基者 [1-3]  。\r\n1912年5月3日，京师大学堂改称北京大学校，严复为首任校长 [4]  。1917年，蔡元培出任校长，“循思想自由原则、取兼容并包之义”，把北大办成全国学术和思想中心，使北大成为新文化运动中心、五四运动策源地。1937年抗日战争爆发，北大与清华大学、南开大学南迁长沙，组成国立长沙临时大学。不久迁往昆明，改称国立西南联合大学。1946年10月在北平复学 [5]  。\r\n北大由教育部直属，中央直管副部级建制，是国家双一流 [6]  、211工程、985工程 [5]  、2011计划重点建设的全国重点大学，九校联盟 [7]  、中国大学校长联谊会、京港大学联盟 [8]  、亚洲大学联盟 [9]  、东亚研究型大学协会、国际研究型大学联盟、环太平洋大学联盟、东亚四大学论坛、国际公立大学论坛、中俄综合性大学联盟重要成员。 [10-13] \r\n北大始终与国家民族的命运紧密相连，聚集了许多学者专家，培养了众多优秀人才，创造了大批重大科学成果，影响和推动了中国近现代思想理论、科学技术、文化教育和社会发展的进程。', 2, 31, 'org/2018/06/bjdx_cCpdUw8_o9RyO13.jpg', '北京', '2018-06-15 09:55:00.000000', 3, 'gr', 9, 0);
@@ -564,10 +604,10 @@ CREATE TABLE `organizations_teacher`  (
 -- ----------------------------
 -- Records of organizations_teacher
 -- ----------------------------
-INSERT INTO `organizations_teacher` VALUES (1, 'Donnie', 10, 'Alibaba', '架构师', 'xxxxxxxxxxxxxxxxxxxx', 0, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/bjdx_gZnFjDS.jpg');
+INSERT INTO `organizations_teacher` VALUES (1, 'Donnie', 10, 'Alibaba', '架构师', 'xxxxxxxxxxxxxxxxxxxx', 6, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/1.jpg');
 INSERT INTO `organizations_teacher` VALUES (2, 'Donnie_x', 3, 'Alibaba', '架构师', 'xxxxxxxxxxxxxxxxxxxx', 0, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/bjdx_bcd0m07.jpg');
 INSERT INTO `organizations_teacher` VALUES (3, 'boo', 2, 'Baidu', 'xxxxxxxxxxxxx', 'xxxxxxxxxxxxxxx', 0, 0, '2018-06-15 15:21:00.000000', 4, 'teacher/2018/06/bjdx_Go3ItLB.jpg');
-INSERT INTO `organizations_teacher` VALUES (4, '1212', 12, '1212', '121额', '2额2', 0, 0, '2018-06-16 08:48:00.000000', 1, 'teacher/2018/06/bjdx.jpg');
+INSERT INTO `organizations_teacher` VALUES (4, '1212', 12, '1212', '121额', '2额2', 3, 0, '2018-06-16 08:48:00.000000', 1, 'teacher/2018/06/bjdx.jpg');
 
 -- ----------------------------
 -- Table structure for users_banner
@@ -653,7 +693,7 @@ CREATE TABLE `users_userprofile`  (
 -- ----------------------------
 -- Records of users_userprofile
 -- ----------------------------
-INSERT INTO `users_userprofile` VALUES (3, 'pbkdf2_sha256$100000$tSCqXw2yK1zC$ilZGN8C0A6WW7QbqffC5W042Jy+/3+6jN7GHL4hfjZo=', '2018-06-19 20:56:02.094137', 1, 'admin', '', '', '1@1.com', 1, 1, '2018-06-14 16:08:06.102436', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
+INSERT INTO `users_userprofile` VALUES (3, 'pbkdf2_sha256$100000$tSCqXw2yK1zC$ilZGN8C0A6WW7QbqffC5W042Jy+/3+6jN7GHL4hfjZo=', '2018-06-20 17:17:11.025451', 1, 'admin', '', '', '1@1.com', 1, 1, '2018-06-14 16:08:06.102436', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
 INSERT INTO `users_userprofile` VALUES (7, 'pbkdf2_sha256$100000$urIOx4KgvO4s$+qbDXUAHN/6Hd1jvnySQof0zS2OMCjwEG7KZCNYZQx8=', NULL, 0, 'donnie0918@sina.com', '', '', 'admin123', 0, 1, '2018-06-14 19:18:43.472329', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
 INSERT INTO `users_userprofile` VALUES (8, 'pbkdf2_sha256$100000$7yzXaqzS3CTx$LUCn125GFLMkw380LAdhxWYbdIu1IR+w+tlLQSMQEAA=', NULL, 0, '123@1.com', '', '', '123@1.com', 0, 0, '2018-06-14 20:51:06.528427', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
 INSERT INTO `users_userprofile` VALUES (9, 'pbkdf2_sha256$100000$wuCZVebTY86N$o0qUk5v09pyHui0j14fhug+bkrfT2JDZk8TiivIMkpQ=', NULL, 0, '123@123.com', '', '', '123@123.com', 0, 0, '2018-06-14 20:54:01.113308', '', NULL, 'female', '', NULL, 'image/default.pngcourses/2018/06/qhdx-logo_TLwBVJS.png');
@@ -727,7 +767,7 @@ CREATE TABLE `xadmin_log`  (
   INDEX `xadmin_log_user_id_bb16a176_fk_users_userprofile_id`(`user_id`) USING BTREE,
   CONSTRAINT `xadmin_log_content_type_id_2a6cb852_fk_django_content_type_id` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `xadmin_log_user_id_bb16a176_fk_users_userprofile_id` FOREIGN KEY (`user_id`) REFERENCES `users_userprofile` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 67 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 79 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of xadmin_log
@@ -796,6 +836,18 @@ INSERT INTO `xadmin_log` VALUES (63, '2018-06-20 11:38:40.729031', '127.0.0.1', 
 INSERT INTO `xadmin_log` VALUES (64, '2018-06-20 11:38:49.688256', '127.0.0.1', '4', 'Video object (4)', 'create', '已添加。', 24, 3);
 INSERT INTO `xadmin_log` VALUES (65, '2018-06-20 11:39:25.440012', '127.0.0.1', '1', 'CourseResource object (1)', 'create', '已添加。', 9, 3);
 INSERT INTO `xadmin_log` VALUES (66, '2018-06-20 11:39:36.798143', '127.0.0.1', '2', 'CourseResource object (2)', 'create', '已添加。', 9, 3);
+INSERT INTO `xadmin_log` VALUES (67, '2018-06-20 14:36:21.419756', '127.0.0.1', '2', 'java', 'change', '修改 image，youneed_know 和 teacher_tell', 11, 3);
+INSERT INTO `xadmin_log` VALUES (68, '2018-06-20 14:41:42.435142', '127.0.0.1', '2', 'java', 'change', '修改 image 和 teacher', 11, 3);
+INSERT INTO `xadmin_log` VALUES (69, '2018-06-20 14:42:06.917680', '127.0.0.1', '1', '[2]的教师: Donnie', 'change', '修改 image', 13, 3);
+INSERT INTO `xadmin_log` VALUES (70, '2018-06-20 18:02:33.395485', '127.0.0.1', '1', 'UserCourse object (1)', 'create', '已添加。', 18, 3);
+INSERT INTO `xadmin_log` VALUES (71, '2018-06-20 18:02:38.228525', '127.0.0.1', '2', 'UserCourse object (2)', 'create', '已添加。', 18, 3);
+INSERT INTO `xadmin_log` VALUES (72, '2018-06-20 18:02:46.111440', '127.0.0.1', '3', 'UserCourse object (3)', 'create', '已添加。', 18, 3);
+INSERT INTO `xadmin_log` VALUES (73, '2018-06-20 18:06:28.631696', '127.0.0.1', '4', 'UserCourse object (4)', 'create', '已添加。', 18, 3);
+INSERT INTO `xadmin_log` VALUES (74, '2018-06-20 18:09:08.143066', '127.0.0.1', '3', 'Donnie', 'create', '已添加。', 9, 3);
+INSERT INTO `xadmin_log` VALUES (75, '2018-06-20 18:11:41.118912', '127.0.0.1', '5', 'UserCourse object (5)', 'create', '已添加。', 18, 3);
+INSERT INTO `xadmin_log` VALUES (76, '2018-06-20 18:11:47.127842', '127.0.0.1', '6', 'UserCourse object (6)', 'create', '已添加。', 18, 3);
+INSERT INTO `xadmin_log` VALUES (77, '2018-06-20 20:54:29.723474', '127.0.0.1', '2', 'Donnie', 'change', '修改 learn_times', 24, 3);
+INSERT INTO `xadmin_log` VALUES (78, '2018-06-21 09:17:02.136311', '127.0.0.1', '11', 'Donnie', 'create', '已添加。', 11, 3);
 
 -- ----------------------------
 -- Table structure for xadmin_usersettings
