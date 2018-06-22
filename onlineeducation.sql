@@ -11,7 +11,7 @@
  Target Server Version : 50634
  File Encoding         : 65001
 
- Date: 21/06/2018 09:45:56
+ Date: 22/06/2018 15:19:12
 */
 
 SET NAMES utf8mb4;
@@ -173,14 +173,12 @@ CREATE TABLE `captcha_captchastore`  (
   `expiration` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `hashkey`(`hashkey`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of captcha_captchastore
 -- ----------------------------
-INSERT INTO `captcha_captchastore` VALUES (1, 'OMAV', 'omav', '1ab52468ac0c5dd8eec623447e9d0f3e0e447875', '2018-06-16 17:19:34.691631');
-INSERT INTO `captcha_captchastore` VALUES (2, 'UBBD', 'ubbd', 'daa1f52d3ea8a6aa7e9452c4fd55cc3bf440acfe', '2018-06-16 17:24:25.921777');
-INSERT INTO `captcha_captchastore` VALUES (3, 'WPHK', 'wphk', '78cf9fc4bba33a5e9d35955bffe503fd4a2cbdd0', '2018-06-16 17:38:21.112160');
+INSERT INTO `captcha_captchastore` VALUES (4, 'DCEM', 'dcem', 'e875dff3ea6c14332e6aa0584f6b1a2f92bb3adc', '2018-06-21 13:13:01.688122');
 
 -- ----------------------------
 -- Table structure for courses_course
@@ -215,7 +213,7 @@ CREATE TABLE `courses_course`  (
 -- Records of courses_course
 -- ----------------------------
 INSERT INTO `courses_course` VALUES (1, 'Donnie', 'xxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxx', 'zj', 13, 13, 31, 'courses/2018/06/bjdx_cCpdUw8.jpg', 0, '2018-06-15 15:26:00.000000', '后端开发', '', 1, NULL, '', '');
-INSERT INTO `courses_course` VALUES (2, 'java', 'java开发', 'java开发', 'zj', 111, 138, 111, 'courses/2018/06/57a801860001c34b12000460_xowDuhR.png', 12, '2018-06-16 08:32:00.000000', '后端开发', 'java', 2, 1, '全栈开发,所向披露', 'python基础你必须要会哦!!!!!');
+INSERT INTO `courses_course` VALUES (2, 'java', 'java开发', 'java开发', 'zj', 111, 172, 112, 'courses/2018/06/57a801860001c34b12000460_xowDuhR.png', 12, '2018-06-16 08:32:00.000000', '后端开发', 'java', 2, 1, '全栈开发,所向披露', 'python基础你必须要会哦!!!!!');
 INSERT INTO `courses_course` VALUES (3, 'Python开发', 'Python开发', 'Python开发', 'gj', 12, 122, 1212, 'courses/2018/06/imooc_Gn1sRjp.png', 12, '2018-06-16 08:32:00.000000', '后端开发', '', 4, NULL, '', '');
 INSERT INTO `courses_course` VALUES (4, '招投标项目开发', '武汉市', '大后天你这人也没人要慢慢', 'zj', 12, 12, 12, 'courses/2018/06/bjdx_cCpdUw8_762aLjX.jpg', 12, '2018-06-16 08:47:00.000000', '后端开发', '', 1, NULL, '', '');
 INSERT INTO `courses_course` VALUES (5, 'django课程', 'django课程', 'django课程', 'gj', 121, 121, 121, 'courses/2018/06/qhdx-logo.png', 12, '2018-06-16 17:41:00.000000', '后端开发', 'java', 1, NULL, '', '');
@@ -223,7 +221,7 @@ INSERT INTO `courses_course` VALUES (6, 'demo1', 'demo1', 'demo1', 'zj', 12, 13,
 INSERT INTO `courses_course` VALUES (7, 'java++++', 'java++++', 'java++++', 'cj', 11, 35, 44, 'courses/2018/06/imooc_Y2Tonsq.png', 44, '2018-06-16 17:42:00.000000', '后端开发', 'java', 2, NULL, '', '');
 INSERT INTO `courses_course` VALUES (8, 'js', 'js', 'js', 'cj', 121, 121, 121, 'courses/2018/06/qhdx-logo_T7wmmyR.png', 1, '2018-06-16 17:43:00.000000', '后端开发', 'java', 3, NULL, '', '');
 INSERT INTO `courses_course` VALUES (9, '121', '121', '3131', 'zj', 13, 131, 33, 'courses/2018/06/bjdx.jpg', 13, '2018-06-16 17:43:00.000000', '后端开发', 'java', 4, NULL, '', '');
-INSERT INTO `courses_course` VALUES (10, '11444', '141414', '1414141', 'cj', 14, 16, 41, 'courses/2018/06/qhdx-logo_MG2ahnm.png', 14, '2018-06-16 17:43:00.000000', '后端开发', '', 5, NULL, '', '');
+INSERT INTO `courses_course` VALUES (10, '11444', '141414', '1414141', 'cj', 14, 17, 41, 'courses/2018/06/qhdx-logo_MG2ahnm.png', 14, '2018-06-16 17:43:00.000000', '后端开发', '', 5, NULL, '', '');
 INSERT INTO `courses_course` VALUES (11, 'Donnie', '上海市', '1111111111111111111111111111111111111111111111111111', 'gj', 12, 21, 32, 'courses/2018/06/4.jpeg', 12, '2018-06-21 09:16:00.000000', '后端开发', '121', 2, 1, '全栈开发,所向披露', 'python基础你必须要会哦!!!!!');
 
 -- ----------------------------
@@ -288,9 +286,9 @@ CREATE TABLE `courses_video`  (
 -- ----------------------------
 -- Records of courses_video
 -- ----------------------------
-INSERT INTO `courses_video` VALUES (1, 'Donnie', '2018-06-20 11:38:00.000000', 'https://www.bilibili.com/video/av25095100/', 12, 1);
-INSERT INTO `courses_video` VALUES (2, 'Donnie', '2018-06-20 11:38:00.000000', 'https://www.bilibili.com/video/av25095100/', 10, 1);
-INSERT INTO `courses_video` VALUES (3, 'general user', '2018-06-20 11:38:00.000000', 'http://www.360doc.com/content/13/0615/08/11675837_292965677.shtml', 12, 2);
+INSERT INTO `courses_video` VALUES (1, 'Donnie', '2018-06-20 11:38:00.000000', 'http://papkfdfye.bkt.clouddn.com/%E5%BD%95%E5%88%B6_2018_06_19_14_14_57_676.mp4', 12, 1);
+INSERT INTO `courses_video` VALUES (2, 'Donnie', '2018-06-20 11:38:00.000000', 'http://papkfdfye.bkt.clouddn.com/%E5%BD%95%E5%88%B6_2018_06_19_14_14_57_676.mp4', 10, 1);
+INSERT INTO `courses_video` VALUES (3, 'general user', '2018-06-20 11:38:00.000000', 'http://papkfdfye.bkt.clouddn.com/%E5%BD%95%E5%88%B6_2018_06_19_14_14_57_676.mp4', 12, 2);
 INSERT INTO `courses_video` VALUES (4, '招投标项目开发', '2018-06-20 11:38:00.000000', 'http://www.360doc.com/content/13/0615/08/11675837_292965677.shtml', 12, 3);
 
 -- ----------------------------
@@ -364,7 +362,7 @@ CREATE TABLE `django_migrations`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 38 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 43 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of django_migrations
@@ -396,6 +394,11 @@ INSERT INTO `django_migrations` VALUES (28, 'organizations', '0004_teacher_image
 INSERT INTO `django_migrations` VALUES (35, 'courses', '0001_initial', '2018-06-20 11:33:39.935391');
 INSERT INTO `django_migrations` VALUES (36, 'operations', '0001_initial', '2018-06-20 12:05:42.600369');
 INSERT INTO `django_migrations` VALUES (37, 'courses', '0002_auto_20180620_1434', '2018-06-20 14:35:00.764313');
+INSERT INTO `django_migrations` VALUES (38, 'users', '0003_auto_20180621_1236', '2018-06-21 12:36:39.129773');
+INSERT INTO `django_migrations` VALUES (39, 'users', '0004_auto_20180621_1303', '2018-06-21 13:03:48.125714');
+INSERT INTO `django_migrations` VALUES (40, 'users', '0005_auto_20180622_0734', '2018-06-22 07:34:32.261021');
+INSERT INTO `django_migrations` VALUES (41, 'users', '0006_auto_20180622_0810', '2018-06-22 08:10:12.674970');
+INSERT INTO `django_migrations` VALUES (42, 'users', '0007_auto_20180622_0811', '2018-06-22 08:12:07.641612');
 
 -- ----------------------------
 -- Table structure for django_session
@@ -413,7 +416,7 @@ CREATE TABLE `django_session`  (
 -- Records of django_session
 -- ----------------------------
 INSERT INTO `django_session` VALUES ('dxoldvi0pnjvuq8bho8xprvxdp1wlqyl', 'ODM1ZTI4MmI2MTFhOTA4ODFhODcwOWE3ZDkxZTdlMWNhOWY4ZTBmZjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXNlcnMudmlld3MuQ3VzdG9tQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImMxMDZiY2Y0MjIwNTU0NjE5ZDY0MThmNmVjMzJhYTcxMWY2ZjEzMzgiLCJMSVNUX1FVRVJZIjpbWyJjb3Vyc2VzIiwiY291cnNlIl0sIiJdfQ==', '2018-06-30 19:31:50.415459');
-INSERT INTO `django_session` VALUES ('hk80oxki7q3ax90nei2wlg22u68w07e6', 'MTljZmIwOGFlNGM4ZmU3YzhjMTEzMWRmYWQ5YmVhYzA3NTRkZmVhMDp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXNlcnMudmlld3MuQ3VzdG9tQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImMxMDZiY2Y0MjIwNTU0NjE5ZDY0MThmNmVjMzJhYTcxMWY2ZjEzMzgiLCJMSVNUX1FVRVJZIjpbWyJjb3Vyc2VzIiwiY291cnNlIl0sIl9yZWxfdGVhY2hlcl9faWRfX2V4YWN0PTEiXX0=', '2018-07-05 09:17:02.248044');
+INSERT INTO `django_session` VALUES ('eop7ylrj07c67ci898lkkdkaxxzolavr', 'ZDBjNTViMTliNzUzOWNjNjRjZDdhYjk4MDI1MGZjNzRmMjBlMmUyMjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXNlcnMudmlld3MuQ3VzdG9tQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImY2M2Y3MTI4Y2ViNDhlOWRiZTQ3YzlhM2MzZjBiYTM3YmFiMDBjMzgiLCJuYXZfbWVudSI6Ilt7XCJ0aXRsZVwiOiBcIlx1NjczYVx1Njc4NFwiLCBcIm1lbnVzXCI6IFt7XCJ0aXRsZVwiOiBcIlx1NTdjZVx1NWUwMlwiLCBcInVybFwiOiBcIi94YWRtaW4vb3JnYW5pemF0aW9ucy9jaXR5ZGljdC9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTF9LCB7XCJ0aXRsZVwiOiBcIlx1OGJmZVx1N2EwYlx1NjczYVx1Njc4NFwiLCBcInVybFwiOiBcIi94YWRtaW4vb3JnYW5pemF0aW9ucy9jb3Vyc2VvcmcvXCIsIFwiaWNvblwiOiBudWxsLCBcIm9yZGVyXCI6IDEyfSwge1widGl0bGVcIjogXCJcdTY1NTlcdTVlMDhcIiwgXCJ1cmxcIjogXCIveGFkbWluL29yZ2FuaXphdGlvbnMvdGVhY2hlci9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTN9XSwgXCJmaXJzdF91cmxcIjogXCIveGFkbWluL29yZ2FuaXphdGlvbnMvY2l0eWRpY3QvXCJ9LCB7XCJ0aXRsZVwiOiBcIlx1NzUyOFx1NjIzN1wiLCBcIm1lbnVzXCI6IFt7XCJ0aXRsZVwiOiBcIlx1NzUyOFx1NjIzN1x1NGZlMVx1NjA2ZlwiLCBcInVybFwiOiBcIi94YWRtaW4vdXNlcnMvdXNlcnByb2ZpbGUvXCIsIFwiaWNvblwiOiBcImZhIGZhLXVzZXJcIiwgXCJvcmRlclwiOiAzfSwge1widGl0bGVcIjogXCJcdTkwYWVcdTdiYjFcdTlhOGNcdThiYzFcdTc4MDFcIiwgXCJ1cmxcIjogXCIveGFkbWluL3VzZXJzL2VtYWlsdmVyaWZ5cmVjb3JkL1wiLCBcImljb25cIjogbnVsbCwgXCJvcmRlclwiOiA1fSwge1widGl0bGVcIjogXCJcdThmNmVcdTY0YWRcdTU2ZmVcIiwgXCJ1cmxcIjogXCIveGFkbWluL3VzZXJzL2Jhbm5lci9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogNn1dLCBcImZpcnN0X2ljb25cIjogXCJmYSBmYS11c2VyXCIsIFwiZmlyc3RfdXJsXCI6IFwiL3hhZG1pbi91c2Vycy91c2VycHJvZmlsZS9cIn0sIHtcInRpdGxlXCI6IFwiXHU3NTI4XHU2MjM3XHU2NGNkXHU0ZjVjXCIsIFwibWVudXNcIjogW3tcInRpdGxlXCI6IFwiXHU3NTI4XHU2MjM3XHU1NGE4XHU4YmUyXCIsIFwidXJsXCI6IFwiL3hhZG1pbi9vcGVyYXRpb25zL3VzZXJhc2svXCIsIFwiaWNvblwiOiBudWxsLCBcIm9yZGVyXCI6IDE0fSwge1widGl0bGVcIjogXCJcdTc1MjhcdTYyMzdcdThiZmVcdTdhMGJcIiwgXCJ1cmxcIjogXCIveGFkbWluL29wZXJhdGlvbnMvdXNlcmNvdXJzZS9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTV9LCB7XCJ0aXRsZVwiOiBcIlx1NzUyOFx1NjIzN1x1NmQ4OFx1NjA2ZlwiLCBcInVybFwiOiBcIi94YWRtaW4vb3BlcmF0aW9ucy91c2VybWVzc2FnZS9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTZ9LCB7XCJ0aXRsZVwiOiBcIlx1OGJmZVx1N2EwYlx1OGJjNFx1OGJiYVwiLCBcInVybFwiOiBcIi94YWRtaW4vb3BlcmF0aW9ucy9jb3Vyc2Vjb21tZW50cy9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTd9LCB7XCJ0aXRsZVwiOiBcIlx1NzUyOFx1NjIzN1x1NjUzNlx1ODVjZlwiLCBcInVybFwiOiBcIi94YWRtaW4vb3BlcmF0aW9ucy91c2VyZmF2b3JpdGUvXCIsIFwiaWNvblwiOiBudWxsLCBcIm9yZGVyXCI6IDE4fV0sIFwiZmlyc3RfdXJsXCI6IFwiL3hhZG1pbi9vcGVyYXRpb25zL3VzZXJhc2svXCJ9LCB7XCJ0aXRsZVwiOiBcIlx1N2JhMVx1NzQwNlwiLCBcIm1lbnVzXCI6IFt7XCJ0aXRsZVwiOiBcIlx1NjVlNVx1NWZkN1x1OGJiMFx1NWY1NVwiLCBcInVybFwiOiBcIi94YWRtaW4veGFkbWluL2xvZy9cIiwgXCJpY29uXCI6IFwiZmEgZmEtY29nXCIsIFwib3JkZXJcIjogMjB9XSwgXCJmaXJzdF9pY29uXCI6IFwiZmEgZmEtY29nXCIsIFwiZmlyc3RfdXJsXCI6IFwiL3hhZG1pbi94YWRtaW4vbG9nL1wifSwge1widGl0bGVcIjogXCJcdThiYTRcdThiYzFcdTU0OGNcdTYzODhcdTY3NDNcIiwgXCJtZW51c1wiOiBbe1widGl0bGVcIjogXCJcdTdlYzRcIiwgXCJ1cmxcIjogXCIveGFkbWluL2F1dGgvZ3JvdXAvXCIsIFwiaWNvblwiOiBcImZhIGZhLWdyb3VwXCIsIFwib3JkZXJcIjogMn0sIHtcInRpdGxlXCI6IFwiXHU2NzQzXHU5NjUwXCIsIFwidXJsXCI6IFwiL3hhZG1pbi9hdXRoL3Blcm1pc3Npb24vXCIsIFwiaWNvblwiOiBcImZhIGZhLWxvY2tcIiwgXCJvcmRlclwiOiA0fV0sIFwiZmlyc3RfaWNvblwiOiBcImZhIGZhLWdyb3VwXCIsIFwiZmlyc3RfdXJsXCI6IFwiL3hhZG1pbi9hdXRoL2dyb3VwL1wifSwge1widGl0bGVcIjogXCJcdThiZmVcdTdhMGJcIiwgXCJtZW51c1wiOiBbe1widGl0bGVcIjogXCJcdThiZmVcdTdhMGJcIiwgXCJ1cmxcIjogXCIveGFkbWluL2NvdXJzZXMvY291cnNlL1wiLCBcImljb25cIjogbnVsbCwgXCJvcmRlclwiOiA3fSwge1widGl0bGVcIjogXCJcdTdhZTBcdTgyODJcIiwgXCJ1cmxcIjogXCIveGFkbWluL2NvdXJzZXMvbGVzc29uL1wiLCBcImljb25cIjogbnVsbCwgXCJvcmRlclwiOiA4fSwge1widGl0bGVcIjogXCJcdTg5YzZcdTk4OTFcIiwgXCJ1cmxcIjogXCIveGFkbWluL2NvdXJzZXMvdmlkZW8vXCIsIFwiaWNvblwiOiBudWxsLCBcIm9yZGVyXCI6IDl9LCB7XCJ0aXRsZVwiOiBcIlx1OGJmZVx1N2EwYlx1OGQ0NFx1NmU5MFwiLCBcInVybFwiOiBcIi94YWRtaW4vY291cnNlcy9jb3Vyc2VyZXNvdXJjZS9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTB9XSwgXCJmaXJzdF91cmxcIjogXCIveGFkbWluL2NvdXJzZXMvY291cnNlL1wifV0iLCJMSVNUX1FVRVJZIjpbWyJvcmdhbml6YXRpb25zIiwiY291cnNlb3JnIl0sIiJdfQ==', '2018-07-06 14:53:16.170509');
 
 -- ----------------------------
 -- Table structure for operations_coursecomments
@@ -509,7 +512,13 @@ CREATE TABLE `operations_userfavorite`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `operations_userfavorite_user_id_092d3821_fk_users_userprofile_id`(`user_id`) USING BTREE,
   CONSTRAINT `operations_userfavorite_user_id_092d3821_fk_users_userprofile_id` FOREIGN KEY (`user_id`) REFERENCES `users_userprofile` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of operations_userfavorite
+-- ----------------------------
+INSERT INTO `operations_userfavorite` VALUES (2, 1, 2, '2018-06-22 11:07:43.102565', 3);
+INSERT INTO `operations_userfavorite` VALUES (6, 2, 1, '2018-06-22 15:13:22.115903', 3);
 
 -- ----------------------------
 -- Table structure for operations_usermessage
@@ -522,7 +531,15 @@ CREATE TABLE `operations_usermessage`  (
   `has_read` tinyint(1) NOT NULL,
   `add_time` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of operations_usermessage
+-- ----------------------------
+INSERT INTO `operations_usermessage` VALUES (1, 3, '欢迎光临,老妹', 1, '2018-06-22 10:24:00.000000');
+INSERT INTO `operations_usermessage` VALUES (2, 3, '可以,起飞', 1, '2018-06-22 10:25:00.000000');
+INSERT INTO `operations_usermessage` VALUES (3, 3, '欢迎光临,老妹', 1, '2018-06-22 11:02:00.000000');
+INSERT INTO `operations_usermessage` VALUES (4, 3, '1231223123', 1, '2018-06-22 11:03:00.000000');
 
 -- ----------------------------
 -- Table structure for organizations_citydict
@@ -572,9 +589,9 @@ CREATE TABLE `organizations_courseorg`  (
 -- ----------------------------
 -- Records of organizations_courseorg
 -- ----------------------------
-INSERT INTO `organizations_courseorg` VALUES (1, '1', '老男孩教育隶属于北京一天天教育科技有限公司，旗下有两大业务，老男孩linux培训和IT项目服务部，是国内唯一专注于Linux系统及架构师实战方向高端的培训机构与项目外包的企业，公司一方面致力于为国内国际大中型互联网企业培养急需的系统工程师，高级架构师，系统开发工程师等职位，一方面为企业提供企业级的各类高端技术培训，技术咨询，技术流程，技术规划，技术架构及调优方案，并参与实施于后期维护，把互联网的成熟技术经验带到传统行业领域。\r\n\r\n      公司在IT培训方面教学理念先进，方法独特，其中的4项学习思想方针（目标、方法、努力、坚持）和6重教学理念（重目标、重思路、重方法、重实践、重习惯、重总结）已深入广大IT网友及所有学员的内心，逐步形成了互联网IT行业内教育经典。\r\n\r\n      截止到目前累计已培养数千VIP学生，间接影响百万的IT群体，毕业生平均工资在毕业一年内平均12K以上，老男孩培训的学生已经遍布于很多就职于北京大部分知名互联网企业，小米手机，京东商城，蓝讯，快网，淘宝，阿里，支付宝，新浪网，搜狐，腾讯，58同城，赶集，和讯，世纪佳缘，当当网，中国移动，中国联通等，也有很多在中小公司任核心运维及运维经理总监职位（寻医问药总监，互动百科总监，盈科律云总监，合力金桥总监等，），累计为行内其他的培训机构讲师深入培训20人以上。', 71, 1112, 'org/201806/qhdx-logo.png', '北京', '2018-06-15 09:41:00.000000', 4, 'gx', 9, 0);
+INSERT INTO `organizations_courseorg` VALUES (1, '1', '老男孩教育隶属于北京一天天教育科技有限公司，旗下有两大业务，老男孩linux培训和IT项目服务部，是国内唯一专注于Linux系统及架构师实战方向高端的培训机构与项目外包的企业，公司一方面致力于为国内国际大中型互联网企业培养急需的系统工程师，高级架构师，系统开发工程师等职位，一方面为企业提供企业级的各类高端技术培训，技术咨询，技术流程，技术规划，技术架构及调优方案，并参与实施于后期维护，把互联网的成熟技术经验带到传统行业领域。\r\n\r\n      公司在IT培训方面教学理念先进，方法独特，其中的4项学习思想方针（目标、方法、努力、坚持）和6重教学理念（重目标、重思路、重方法、重实践、重习惯、重总结）已深入广大IT网友及所有学员的内心，逐步形成了互联网IT行业内教育经典。\r\n\r\n      截止到目前累计已培养数千VIP学生，间接影响百万的IT群体，毕业生平均工资在毕业一年内平均12K以上，老男孩培训的学生已经遍布于很多就职于北京大部分知名互联网企业，小米手机，京东商城，蓝讯，快网，淘宝，阿里，支付宝，新浪网，搜狐，腾讯，58同城，赶集，和讯，世纪佳缘，当当网，中国移动，中国联通等，也有很多在中小公司任核心运维及运维经理总监职位（寻医问药总监，互动百科总监，盈科律云总监，合力金桥总监等，），累计为行内其他的培训机构讲师深入培训20人以上。', 71, 1113, 'org/201806/qhdx-logo.png', '北京', '2018-06-15 09:41:00.000000', 4, 'gx', 9, 0);
 INSERT INTO `organizations_courseorg` VALUES (2, '2', '传智播客', 16, 33, 'org/2018/06/njdx.jpg', '湖北', '2018-06-15 09:50:00.000000', 3, 'gx', 9, 0);
-INSERT INTO `organizations_courseorg` VALUES (3, '3', '文都', 233, 4444, 'org/2018/06/bjdx.jpg', '湖北', '2018-06-15 09:51:00.000000', 1, 'gr', 1111111111, 0);
+INSERT INTO `organizations_courseorg` VALUES (3, '3', '文都', 234, 4444, 'org/2018/06/bjdx.jpg', '湖北', '2018-06-15 09:51:00.000000', 1, 'gr', 1111111111, 0);
 INSERT INTO `organizations_courseorg` VALUES (4, '4', '培训', 3333, 33, 'org/2018/06/imooc_Gn1sRjp.png', '湖北', '2018-06-15 09:52:00.000000', 2, 'gr', 9, 0);
 INSERT INTO `organizations_courseorg` VALUES (5, '5', '黑马', 3, 1, 'org/2018/06/bjdx_cCpdUw8.jpg', '湖北', '2018-06-15 09:55:00.000000', 2, 'gr', 9, 0);
 INSERT INTO `organizations_courseorg` VALUES (6, '6', '北京大学（Peking University）简称“北大”，诞生于1898年，初名京师大学堂，是中国近代第一所国立大学，也是最早以“大学”之名创办的学校，其成立标志着中国近代高等教育的开端。北大是中国近代以来唯一以国家最高学府身份创立的学校，最初也是国家最高教育行政机关，行使教育部职能，统管全国教育。北大催生了中国最早的现代学制，开创了中国最早的文科、理科、社科、农科、医科等大学学科，是近代以来中国高等教育的奠基者 [1-3]  。\r\n1912年5月3日，京师大学堂改称北京大学校，严复为首任校长 [4]  。1917年，蔡元培出任校长，“循思想自由原则、取兼容并包之义”，把北大办成全国学术和思想中心，使北大成为新文化运动中心、五四运动策源地。1937年抗日战争爆发，北大与清华大学、南开大学南迁长沙，组成国立长沙临时大学。不久迁往昆明，改称国立西南联合大学。1946年10月在北平复学 [5]  。\r\n北大由教育部直属，中央直管副部级建制，是国家双一流 [6]  、211工程、985工程 [5]  、2011计划重点建设的全国重点大学，九校联盟 [7]  、中国大学校长联谊会、京港大学联盟 [8]  、亚洲大学联盟 [9]  、东亚研究型大学协会、国际研究型大学联盟、环太平洋大学联盟、东亚四大学论坛、国际公立大学论坛、中俄综合性大学联盟重要成员。 [10-13] \r\n北大始终与国家民族的命运紧密相连，聚集了许多学者专家，培养了众多优秀人才，创造了大批重大科学成果，影响和推动了中国近现代思想理论、科学技术、文化教育和社会发展的进程。', 2, 31, 'org/2018/06/bjdx_cCpdUw8_o9RyO13.jpg', '北京', '2018-06-15 09:55:00.000000', 3, 'gr', 9, 0);
@@ -604,7 +621,7 @@ CREATE TABLE `organizations_teacher`  (
 -- ----------------------------
 -- Records of organizations_teacher
 -- ----------------------------
-INSERT INTO `organizations_teacher` VALUES (1, 'Donnie', 10, 'Alibaba', '架构师', 'xxxxxxxxxxxxxxxxxxxx', 6, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/1.jpg');
+INSERT INTO `organizations_teacher` VALUES (1, 'Donnie', 10, 'Alibaba', '架构师', 'xxxxxxxxxxxxxxxxxxxx', 24, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/1.jpg');
 INSERT INTO `organizations_teacher` VALUES (2, 'Donnie_x', 3, 'Alibaba', '架构师', 'xxxxxxxxxxxxxxxxxxxx', 0, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/bjdx_bcd0m07.jpg');
 INSERT INTO `organizations_teacher` VALUES (3, 'boo', 2, 'Baidu', 'xxxxxxxxxxxxx', 'xxxxxxxxxxxxxxx', 0, 0, '2018-06-15 15:21:00.000000', 4, 'teacher/2018/06/bjdx_Go3ItLB.jpg');
 INSERT INTO `organizations_teacher` VALUES (4, '1212', 12, '1212', '121额', '2额2', 3, 0, '2018-06-16 08:48:00.000000', 1, 'teacher/2018/06/bjdx.jpg');
@@ -629,12 +646,12 @@ CREATE TABLE `users_banner`  (
 DROP TABLE IF EXISTS `users_emailverifyrecord`;
 CREATE TABLE `users_emailverifyrecord`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `code` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `send_type` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `code` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `send_type` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `send_time` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 29 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of users_emailverifyrecord
@@ -663,6 +680,10 @@ INSERT INTO `users_emailverifyrecord` VALUES (21, 'F4ZEctCEHydCdZF7', '297221502
 INSERT INTO `users_emailverifyrecord` VALUES (22, 'BKLoARtIllnDiNxG', '2972215024@qq.com', 'register', '2018-06-15 20:40:20.686741');
 INSERT INTO `users_emailverifyrecord` VALUES (23, '4gT6LZr1WVtPRVHY', '2972215024@qq.com', 'register', '2018-06-15 20:42:42.068216');
 INSERT INTO `users_emailverifyrecord` VALUES (24, 'njQ890Csy0gFgKjf', '2972215024@qq.com', 'forget', '2018-06-15 20:44:01.883186');
+INSERT INTO `users_emailverifyrecord` VALUES (25, 'eCjxR3bA7QmvRUVT', 'donnie0918@sina.com', 'forget', '2018-06-21 13:08:36.095022');
+INSERT INTO `users_emailverifyrecord` VALUES (26, 'atZt', '2972215024@qq.com', 'update_email', '2018-06-22 07:35:22.528946');
+INSERT INTO `users_emailverifyrecord` VALUES (27, 'RXxv', '2972215024@qq.com', 'update_email', '2018-06-22 07:36:17.340336');
+INSERT INTO `users_emailverifyrecord` VALUES (28, '0Cag', '369306126@qq.com', 'update_email', '2018-06-22 07:37:43.355662');
 
 -- ----------------------------
 -- Table structure for users_userprofile
@@ -688,16 +709,15 @@ CREATE TABLE `users_userprofile`  (
   `image` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `username`(`username`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of users_userprofile
 -- ----------------------------
-INSERT INTO `users_userprofile` VALUES (3, 'pbkdf2_sha256$100000$tSCqXw2yK1zC$ilZGN8C0A6WW7QbqffC5W042Jy+/3+6jN7GHL4hfjZo=', '2018-06-20 17:17:11.025451', 1, 'admin', '', '', '1@1.com', 1, 1, '2018-06-14 16:08:06.102436', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
+INSERT INTO `users_userprofile` VALUES (3, 'pbkdf2_sha256$100000$2h4S5mjy9RX5$w5g3ov31r6HGNdLQPxUY0gfaPspAXLSVCacZqkcS+H0=', '2018-06-22 13:09:00.297026', 1, 'admin', '', '', '369306126@qq.com', 1, 1, '2018-06-14 16:08:06.102436', 'demo1', '2018-05-28', 'male', 'jianganqu', '12345678910', 'image/201806/4.jpeg');
 INSERT INTO `users_userprofile` VALUES (7, 'pbkdf2_sha256$100000$urIOx4KgvO4s$+qbDXUAHN/6Hd1jvnySQof0zS2OMCjwEG7KZCNYZQx8=', NULL, 0, 'donnie0918@sina.com', '', '', 'admin123', 0, 1, '2018-06-14 19:18:43.472329', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
 INSERT INTO `users_userprofile` VALUES (8, 'pbkdf2_sha256$100000$7yzXaqzS3CTx$LUCn125GFLMkw380LAdhxWYbdIu1IR+w+tlLQSMQEAA=', NULL, 0, '123@1.com', '', '', '123@1.com', 0, 0, '2018-06-14 20:51:06.528427', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
-INSERT INTO `users_userprofile` VALUES (9, 'pbkdf2_sha256$100000$wuCZVebTY86N$o0qUk5v09pyHui0j14fhug+bkrfT2JDZk8TiivIMkpQ=', NULL, 0, '123@123.com', '', '', '123@123.com', 0, 0, '2018-06-14 20:54:01.113308', '', NULL, 'female', '', NULL, 'image/default.pngcourses/2018/06/qhdx-logo_TLwBVJS.png');
-INSERT INTO `users_userprofile` VALUES (22, 'pbkdf2_sha256$100000$0xDV5ad3olGW$Fc4PfFVIrqVWROUmA+AtPmJ+7tK4FDi6OSN8NAuiu/Y=', '2018-06-15 20:44:43.459695', 0, '2972215024@qq.com', '', '', '2972215024@qq.com', 0, 1, '2018-06-15 20:42:41.985436', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
+INSERT INTO `users_userprofile` VALUES (9, 'pbkdf2_sha256$100000$wuCZVebTY86N$o0qUk5v09pyHui0j14fhug+bkrfT2JDZk8TiivIMkpQ=', NULL, 0, '123@123.com', '', '', '123@123.com', 0, 0, '2018-06-14 20:54:01.113308', '', NULL, 'female', '', '', 'image/default.pngcourses/2018/06/qhdx-logo_TLwBVJS.png');
 
 -- ----------------------------
 -- Table structure for users_userprofile_groups
@@ -767,7 +787,7 @@ CREATE TABLE `xadmin_log`  (
   INDEX `xadmin_log_user_id_bb16a176_fk_users_userprofile_id`(`user_id`) USING BTREE,
   CONSTRAINT `xadmin_log_content_type_id_2a6cb852_fk_django_content_type_id` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `xadmin_log_user_id_bb16a176_fk_users_userprofile_id` FOREIGN KEY (`user_id`) REFERENCES `users_userprofile` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 79 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 87 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of xadmin_log
@@ -848,6 +868,14 @@ INSERT INTO `xadmin_log` VALUES (75, '2018-06-20 18:11:41.118912', '127.0.0.1', 
 INSERT INTO `xadmin_log` VALUES (76, '2018-06-20 18:11:47.127842', '127.0.0.1', '6', 'UserCourse object (6)', 'create', '已添加。', 18, 3);
 INSERT INTO `xadmin_log` VALUES (77, '2018-06-20 20:54:29.723474', '127.0.0.1', '2', 'Donnie', 'change', '修改 learn_times', 24, 3);
 INSERT INTO `xadmin_log` VALUES (78, '2018-06-21 09:17:02.136311', '127.0.0.1', '11', 'Donnie', 'create', '已添加。', 11, 3);
+INSERT INTO `xadmin_log` VALUES (79, '2018-06-22 10:25:07.473390', '127.0.0.1', '1', 'UserMessage object (1)', 'create', '已添加。', 19, 3);
+INSERT INTO `xadmin_log` VALUES (80, '2018-06-22 10:25:21.156087', '127.0.0.1', '2', 'UserMessage object (2)', 'create', '已添加。', 19, 3);
+INSERT INTO `xadmin_log` VALUES (81, '2018-06-22 11:02:33.681131', '127.0.0.1', '3', 'UserMessage object (3)', 'create', '已添加。', 19, 3);
+INSERT INTO `xadmin_log` VALUES (82, '2018-06-22 11:03:11.482391', '127.0.0.1', '4', 'UserMessage object (4)', 'create', '已添加。', 19, 3);
+INSERT INTO `xadmin_log` VALUES (83, '2018-06-22 13:09:17.598735', '127.0.0.1', '2', 'Donnie', 'change', '修改 url', 24, 3);
+INSERT INTO `xadmin_log` VALUES (84, '2018-06-22 13:09:26.166835', '127.0.0.1', '3', 'general user', 'change', '修改 url', 24, 3);
+INSERT INTO `xadmin_log` VALUES (85, '2018-06-22 13:11:07.712132', '127.0.0.1', '1', 'Donnie', 'change', '修改 url', 24, 3);
+INSERT INTO `xadmin_log` VALUES (86, '2018-06-22 13:11:16.589382', '127.0.0.1', '2', 'Donnie', 'change', '没有字段被修改。', 24, 3);
 
 -- ----------------------------
 -- Table structure for xadmin_usersettings
