@@ -17,15 +17,16 @@ Including another URLconf
 from django.urls import path,include,re_path
 import xadmin
 from django.views.generic import TemplateView  #调用静态HTML的时候用这个
-from users.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyView
+from users.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyView,LogoutView
 from organizations.views import OrgView
 from django.views.static import serve
-from onlineEducation.settings import MEDIA_ROOT
+from onlineEducation.settings import MEDIA_ROOT,STATIC_ROOT
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('',TemplateView.as_view(template_name='index.html'), name='index'),
     path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name="logout"),
     path('register/', RegisterView.as_view(), name='register'),
     path('captcha/',include('captcha.urls')),
     re_path('active/(?P<active_code>.*)/',ActiveUserView.as_view(),name="user_active"),
@@ -34,12 +35,17 @@ urlpatterns = [
     path('modify_pwd/',ModifyView.as_view(),name='modify_pwd'),
     path('org_list/',OrgView.as_view(),name="org_list"),
     re_path(r'^media/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),
+    re_path(r'^static/(?P<path>.*)', serve, {"document_root": STATIC_ROOT}),
     path("org/", include('organizations.urls', namespace="org")),
     path("course/", include('courses.urls', namespace="course")),
     path("users/", include('users.urls', namespace="users")),
 ]
 
 
+# 全局404页面配置
+handler404 = 'users.views.pag_not_found'
+# 全局500页面配置
+handler500 = 'users.views.page_error'
 
 
 

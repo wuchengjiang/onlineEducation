@@ -30,6 +30,9 @@
             <div class="top">
                 <div class="wp">
                     <div class="fl"><p>服务电话：<b>33333333</b></p></div>
+                    <a href="{% url "users:my_message" %}">
+                    <div class="msg-num"> <span id="MsgNum">{{ request.user.unread_nums }}</span></div>
+                    </a>
                     <!--登录后跳转-->
                     {% if request.user.is_authenticated %}
                         <div class="personal">
@@ -47,7 +50,7 @@
                         </dl>
                         <div class="btn">
                         <a class="personcenter fl" href="{% url 'users:user_info' %}">进入个人中心</a>
-                        <a class="fr" href="">退出</a>
+                        <a class="fr" href="{% url "logout" %}">退出</a>
                     {% else %}
                         <a style="color:white" class="fr registerbtn" href="register.html">注册</a>
                         <a style="color:white" class="fr loginbtn" href="login.html">登录</a>
@@ -62,7 +65,7 @@
             <div class="middle">
                 <div class="wp">
                     <a href="{% url 'index' %}"><img class="fl" src="{% static 'images/logo2.png' %}"/></a>
-                    <h1>我的慕学网</h1>
+                    <h1>Youtube</h1>
                 </div>
             </div>
         </div>
@@ -88,7 +91,7 @@
                 <li {% ifequal  '/users/my_message/' request.path %}
                     class="active2"
                 {% endifequal %}>
-                    <a href="" style="position: relative;">
+                    <a href="{% url "users:my_message" %}" style="position: relative;">
                         我的消息
                     </a>
                 </li>

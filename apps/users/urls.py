@@ -1,6 +1,6 @@
 from django.urls import path,include,re_path
 from .views import UserinfoView,UploadImageView,UpdatePwdView,SendEmailCodeView
-from .views import UpdateEmailView,MyCourseView,MyFavOrgView,MyFavTeacherView,MyFavCourseView#,MyMessageView
+from .views import UpdateEmailView,MyCourseView,MyFavOrgView,MyFavTeacherView,MyFavCourseView,MyMessageView
 
 app_name = 'users'
 
@@ -24,5 +24,5 @@ urlpatterns = [
     # #我的收藏--课程
     path('myfav/course/', MyFavCourseView.as_view(), name="myfav_course"),
     # #我的消息
-    # path('my_message/', MyMessageView.as_view(), name="my_message"),
+    path('my_message/', MyMessageView.as_view(), name="my_message"),
 ]
