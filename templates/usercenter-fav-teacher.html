@@ -25,9 +25,9 @@
             <div class="personal_des permessage">
                 <div class="head">
                     <ul class="tab_header messagehead">
-                        <li ><a href="{% url 'users:myfav_org' %}">课程机构</a> </li>
+                        <li ><a href="{% url 'users:myfav_org' %}">公司</a> </li>
                         <li class="active"><a href="{% url 'users:myfav_teacher' %}">授课教师 </a></li>
-                        <li><a href="{% url 'users:myfav_course' %}">公开课程</a></li>
+                        <li><a href="{% url 'users:myfav_course' %}">艺人</a></li>
                     </ul>
                 </div>
                 <div class="messagelist">
@@ -47,7 +47,7 @@
                                 </h1>
                                 <ul class="cont clearfix">
                                     <li class="time">工作年限：<span>{{ teacher.work_years }}年</span></li>
-                                    <li class="c7">课程数：<span>{{ teacher.get_course_nums }}</span></li>
+                                    <li class="c7">艺人数：<span>{{ teacher.get_course_nums }}</span></li>
                                 </ul>
                                 <ul class="cont clearfix">
                                     <li class="time">工作公司：<span>{{ teacher.work_company }}</span></li>

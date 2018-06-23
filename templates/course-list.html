@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-{% block title %}公开课列表{% endblock %}
+{% block title %}艺人列表{% endblock %}
 {% load staticfiles %}
 {% block custom_bread %}
     <section>
         <div class="wp">
             <ul  class="crumbs">
                 <li><a href="{% url 'index' %}">首页</a>></li>
-                <li>公开课</li>
+                <li>艺人</li>
             </ul>
         </div>
     </section>
@@ -75,7 +75,7 @@
                 </div>
 			</div>
 			<div class="right layout">
-				<div class="head">热门课程推荐</div>
+				<div class="head">热门艺人推荐</div>
 				<div class="group_recommend">
                 {% for hot_course in hot_courses %}
                     <dl>
@@ -86,7 +86,7 @@
                         </dt>
                         <dd>
                             <a target="_blank" href="{% url 'course:course_detail' hot_course.id %}"><h2> {{ hot_course.name }}</h2></a>
-                            <span class="fl">难度：<i class="key">{{ hot_course.get_degree_display }}</i></span>
+                            <span class="fl">热度：<i class="key">{{ hot_course.get_degree_display }}</i></span>
                         </dd>
                     </dl>
                 {% endfor %}

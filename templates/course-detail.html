@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block title %}
-    公开课列表
+    艺人列表
 {% endblock %}
 
 
@@ -12,8 +12,8 @@
             <div class="crumbs">
                 <ul>
                     <li><a href="{% url "index" %}">首页</a>></li>
-                    <li><a href="{% url "course:course_list" %}">公开课程</a>></li>
-                    <li>课程详情</li>
+                    <li><a href="{% url "course:course_list" %}">艺人</a>></li>
+                    <li>艺人详情</li>
                 </ul>
             </div>
         </div>
@@ -39,7 +39,7 @@
                             <h1 title="{{ course.name }}">{{ course.name }}</h1>
                             <span class="key">{{ course.desc }}</span>
                             <div class="prize">
-                                <span class="fl">难度：<i class="key">{{ course.get_degree_display }}</i></span>
+                                <span class="fl">热度：<i class="key">{{ course.get_degree_display }}</i></span>
                                 <span class="fr">学习人数：{{ course.students }}</span>
                             </div>
                             <ul class="parameter">
@@ -49,7 +49,7 @@
                                 <li><span
                                         class="pram word3">章&nbsp;节&nbsp;数：</span><span>{{ course.get_zj_nums }}</span>
                                 </li>
-                                <li><span class="pram word3">课程类别：</span><span title="">{{ course.category }}</span>
+                                <li><span class="pram word3">艺人类别：</span><span title="">{{ course.category }}</span>
                                 </li>
                                 <li class="piclist"><span class="pram word4">学习用户：</span>
 
@@ -89,8 +89,8 @@
                     </div>
                     <div class="right">
                         <div class="head">
-                            <h1>授课机构</h1>
-                            <p>世界名校，课程权威</p>
+                            <h1>公司</h1>
+                            <p>世界排名,权威发布</p>
                         </div>
                         <div class="pic">
                             <a href="/company/14/">
@@ -130,7 +130,7 @@
                 <div class="left layout">
                     <div class="head">
                         <ul class="tab_header">
-                            <li class="active">课程详情</li>
+                            <li class="active">艺人详情</li>
                         </ul>
                     </div>
                     <div class="tab_cont tab_cont1">
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <div class="right layout">
-                    <div class="head">相关课程推荐</div>
+                    <div class="head">相关艺人推荐</div>
                     <div class="group_recommend">
 
                         {% for relate_course in relate_courses %}

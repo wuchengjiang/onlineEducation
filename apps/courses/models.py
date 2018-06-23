@@ -20,7 +20,7 @@ class Course(models.Model):
     image = models.ImageField("封面图",upload_to="courses/%Y/%m",max_length=100)
     click_nums = models.IntegerField("点击数",default=0)
     add_time = models.DateTimeField("添加时间",default=datetime.now,)
-    category = models.CharField("课程类别", max_length=20, default="后端开发")
+    category = models.CharField("课程类别", max_length=20, default="流行")
     tag = models.CharField('课程标签', default='', max_length=10)
     course_org = models.ForeignKey(CourseOrg, on_delete=models.CASCADE, verbose_name="所属机构", null=True, blank=True)
     teacher = models.ForeignKey(Teacher,on_delete=models.CASCADE,verbose_name='讲师', null=True, blank=True)

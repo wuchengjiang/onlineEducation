@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title %}讲师详情{% endblock %}
+{% block title %}公司详情{% endblock %}
 
 {% block custom_bread %}
     <section>
         <div class="wp">
             <ul class="crumbs">
                 <li><a href="{% url 'index' %}">首页</a>></li>
-                <li><a href="{% url 'org:teacher_list' %}">授课讲师</a>></li>
-                <li>讲师详情</li>
+                <li><a href="{% url 'org:teacher_list' %}">艺人公司</a>></li>
+                <li>公司详情</li>
             </ul>
         </div>
     </section>
@@ -41,7 +41,7 @@
                             </dt>
                             <dd>
                                 <a href="/diary/hk_detail/10/">
-                                    <h1>{{ teacher.name }}<span class="key picbig">金牌讲师</span></h1>
+                                    <h1>{{ teacher.name }}<span class="key picbig">王牌公司</span></h1>
                                 </a>
                                 <ul class="cont">
                                     <li>工作年限：<span>{{ teacher.work_years }}年</span></li>
@@ -57,7 +57,7 @@
                     <div class="left layout">
                         <div class="head">
                             <ul class="tab_header">
-                                <li class="active">全部课程</li>
+                                <li class="active">全部艺人</li>
                             </ul>
                         </div>
                         <div class="companycenter">
@@ -116,7 +116,7 @@
                 <div class="butler_detail_cont">
                     <div class="butler_list_box">
                         <div class="right layout">
-                            <div class="head">讲师排行榜</div>
+                            <div class="head">公司热度排行榜</div>
                             {% for hot_teacher in sorted_teacher %}
                                 <dl class="des">
                                     <span class="num fl">1</span>

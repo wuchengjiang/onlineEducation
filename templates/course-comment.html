@@ -10,9 +10,9 @@
             <div class="crumbs">
                 <ul>
                     <li><a href="{% url "index" %}">首页</a>></li>
-                    <li><a href="{% url "course:course_list" %}">公开课程</a>></li>
+                    <li><a href="{% url "course:course_list" %}">艺人</a>></li>
                     <li><a href="{% url "course:course_detail" course.id %}">{{ course.name }}</a>></li>
-                    <li>课程评论</li>
+                    <li>评论</li>
                 </ul>
             </div>
         </div>
@@ -32,7 +32,7 @@
                 <div class="statics clearfix">
                     <div class="static-item ">
                         <span class="meta-value"><strong>{{ course.get_degree_display }}</strong></span>
-                        <span class="meta">难度</span>
+                        <span class="meta">热度</span>
                         <em></em>
                     </div>
                     <div class="static-item static-time">
@@ -136,7 +136,7 @@
                                 </div>
                                 <div class="course-info-tip">
                                     <dl class="first">
-                                        <dt>课程须知</dt>
+                                        <dt>艺人告诉你</dt>
                                         <dd class="autowrap">{{ course.youneed_know }}</dd>
                                     </dl>
                                     <dl>

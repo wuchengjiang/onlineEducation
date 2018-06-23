@@ -11,7 +11,7 @@
  Target Server Version : 50634
  File Encoding         : 65001
 
- Date: 22/06/2018 15:19:12
+ Date: 23/06/2018 15:31:47
 */
 
 SET NAMES utf8mb4;
@@ -173,12 +173,14 @@ CREATE TABLE `captcha_captchastore`  (
   `expiration` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `hashkey`(`hashkey`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of captcha_captchastore
 -- ----------------------------
 INSERT INTO `captcha_captchastore` VALUES (4, 'DCEM', 'dcem', 'e875dff3ea6c14332e6aa0584f6b1a2f92bb3adc', '2018-06-21 13:13:01.688122');
+INSERT INTO `captcha_captchastore` VALUES (5, 'BSFQ', 'bsfq', '9a535e28de5965ce838cd1dfd8ab54c8046abe5a', '2018-06-22 16:06:56.318232');
+INSERT INTO `captcha_captchastore` VALUES (6, 'SZKB', 'szkb', '842cbbb8df1b761ae6f077c7e2ae88023fa4b983', '2018-06-22 16:11:25.340639');
 
 -- ----------------------------
 -- Table structure for courses_course
@@ -212,17 +214,17 @@ CREATE TABLE `courses_course`  (
 -- ----------------------------
 -- Records of courses_course
 -- ----------------------------
-INSERT INTO `courses_course` VALUES (1, 'Donnie', 'xxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxx', 'zj', 13, 13, 31, 'courses/2018/06/bjdx_cCpdUw8.jpg', 0, '2018-06-15 15:26:00.000000', '后端开发', '', 1, NULL, '', '');
-INSERT INTO `courses_course` VALUES (2, 'java', 'java开发', 'java开发', 'zj', 111, 172, 112, 'courses/2018/06/57a801860001c34b12000460_xowDuhR.png', 12, '2018-06-16 08:32:00.000000', '后端开发', 'java', 2, 1, '全栈开发,所向披露', 'python基础你必须要会哦!!!!!');
-INSERT INTO `courses_course` VALUES (3, 'Python开发', 'Python开发', 'Python开发', 'gj', 12, 122, 1212, 'courses/2018/06/imooc_Gn1sRjp.png', 12, '2018-06-16 08:32:00.000000', '后端开发', '', 4, NULL, '', '');
-INSERT INTO `courses_course` VALUES (4, '招投标项目开发', '武汉市', '大后天你这人也没人要慢慢', 'zj', 12, 12, 12, 'courses/2018/06/bjdx_cCpdUw8_762aLjX.jpg', 12, '2018-06-16 08:47:00.000000', '后端开发', '', 1, NULL, '', '');
-INSERT INTO `courses_course` VALUES (5, 'django课程', 'django课程', 'django课程', 'gj', 121, 121, 121, 'courses/2018/06/qhdx-logo.png', 12, '2018-06-16 17:41:00.000000', '后端开发', 'java', 1, NULL, '', '');
-INSERT INTO `courses_course` VALUES (6, 'demo1', 'demo1', 'demo1', 'zj', 12, 13, 12, 'courses/2018/06/qhdx-logo_TLwBVJS.png', 11, '2018-06-16 17:42:00.000000', '后端开发', '', 3, NULL, '', '');
-INSERT INTO `courses_course` VALUES (7, 'java++++', 'java++++', 'java++++', 'cj', 11, 35, 44, 'courses/2018/06/imooc_Y2Tonsq.png', 44, '2018-06-16 17:42:00.000000', '后端开发', 'java', 2, NULL, '', '');
-INSERT INTO `courses_course` VALUES (8, 'js', 'js', 'js', 'cj', 121, 121, 121, 'courses/2018/06/qhdx-logo_T7wmmyR.png', 1, '2018-06-16 17:43:00.000000', '后端开发', 'java', 3, NULL, '', '');
-INSERT INTO `courses_course` VALUES (9, '121', '121', '3131', 'zj', 13, 131, 33, 'courses/2018/06/bjdx.jpg', 13, '2018-06-16 17:43:00.000000', '后端开发', 'java', 4, NULL, '', '');
-INSERT INTO `courses_course` VALUES (10, '11444', '141414', '1414141', 'cj', 14, 17, 41, 'courses/2018/06/qhdx-logo_MG2ahnm.png', 14, '2018-06-16 17:43:00.000000', '后端开发', '', 5, NULL, '', '');
-INSERT INTO `courses_course` VALUES (11, 'Donnie', '上海市', '1111111111111111111111111111111111111111111111111111', 'gj', 12, 21, 32, 'courses/2018/06/4.jpeg', 12, '2018-06-21 09:16:00.000000', '后端开发', '121', 2, 1, '全栈开发,所向披露', 'python基础你必须要会哦!!!!!');
+INSERT INTO `courses_course` VALUES (1, 'blackpink', 'BLACKPINK是YG Entertainment于2016年8月8日推出的女子演唱组合，由金智秀（JISOO）、金智妮（JENNIE）、朴彩英（Rosé）、LISA 4名成员组成。BLACKPINK这个组合名在看起来很美的粉色中稍微加入了否定的意义，旨在传达出“不要只看漂亮的部分”、“看到的并不是全部”的意思 [1]  。\r\n2016年8月8日，发行首张单曲专辑《SQUARE ONE》并正式出道，单曲专辑在印尼、马来西亚、等十四个国家的iTunes的专辑榜夺得冠军，《WHISTLE》在八个音乐网站周排行榜冠军，是首个以出道曲创下这纪录的女团', 'xxxxxxxxxxxxxxxxxxxxx', 'zj', 13, 13, 31, 'courses/2018/06/bjdx_cCpdUw8.jpg', 0, '2018-06-15 15:26:00.000000', '流行', '', 1, NULL, '', '');
+INSERT INTO `courses_course` VALUES (2, 'G-Dragon', 'G-DRAGON（权志龙、권지용），1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长，所属经纪公司YG Entertainment词曲制作人', 'java开发', 'zj', 111, 176, 112, 'courses/2018/06/57a801860001c34b12000460_xowDuhR.png', 12, '2018-06-16 08:32:00.000000', '流行', 'java', 2, 1, '全栈开发,所向披露', 'python基础你必须要会哦!!!!!');
+INSERT INTO `courses_course` VALUES (3, 'EXO', 'EXO，是韩国SM娱乐有限公司于2012年4月8日正式推出的12人男子流行演唱团体，现以金珉锡（XIUMIN）、金俊勉（SUHO）、张艺兴（LAY）、边伯贤（BAEKHYUN）、金钟大（CHEN）、朴灿烈（CHANYEOL）、都暻秀（D.O.）、金钟仁（KAI）、吴世勋（SEHUN）9名成员的形式展开活动。', 'Python开发', 'gj', 12, 122, 1212, 'courses/2018/06/imooc_Gn1sRjp.png', 12, '2018-06-16 08:32:00.000000', '流行', '', 4, NULL, '', '');
+INSERT INTO `courses_course` VALUES (4, 'Bewhy', 'BewhY（비와이），韩国HipHop歌手、MC。出生于1993年6月15日,仁川广域市。2014年发行出道单曲《Waltz》，随后7月，发行第二首单曲《Swimming Bananas》。2015年推出个人首张solo专辑《Time Travel》。2016年参加Show Me The Money第5季，获得最终胜利。 [1-3] ', '大后天你这人也没人要慢慢', 'zj', 12, 12, 12, 'courses/2018/06/bjdx_cCpdUw8_762aLjX.jpg', 12, '2018-06-16 08:47:00.000000', '流行', '', 1, NULL, '', '');
+INSERT INTO `courses_course` VALUES (5, '周杰伦', '周杰伦出生于台湾省新北市，祖籍福建省永春县 [24]  。周杰伦4岁的\r\n周杰伦小时候\r\n周杰伦小时候(17张)\r\n 时候，母亲叶惠美把他送到淡江山叶幼儿音乐班学习钢琴 [25]  。周杰伦读初中二年级时，他的父母因性格不合离婚，而周杰伦则归母亲叶惠美抚养 [26]  。中考时，周杰伦没有考上普通高中；同年，他因为擅长钢琴而被淡江中学第一届音乐班录取。高中毕业以后，他两次报考台北大学音乐系均没有被录取，于是他开始在一家餐馆打工 [25]  。', 'django课程', 'gj', 121, 121, 121, 'courses/2018/06/qhdx-logo.png', 12, '2018-06-16 17:41:00.000000', '山歌', 'java', 1, NULL, '', '');
+INSERT INTO `courses_course` VALUES (6, '薛之谦', '薛之谦4岁的时候，薛妈妈因为风湿性心脏病去世，薛之谦由爸爸带大。高中毕业的时候，爸爸为了筹钱支持薛之谦去瑞士留学把房子卖了，用卖房所得的60万送他到瑞士留学，学习酒店管理。放假回家的薛之谦在商场门口被经纪公司的星探看中，他们百般动员他留下当艺人，答应给他签约、出唱片。可等到薛之谦决定暂停瑞士的学业留下以后，经纪公司又要他出30万的包装费用。薛之谦灰心之余，又遇上了真人版《我为歌狂》剧组在招聘演员，他很幸运地获得了其中一个角色，可遗憾的是最终由于版权问题，这部戏没有成功开拍', 'demo1', 'zj', 12, 13, 12, 'courses/2018/06/qhdx-logo_TLwBVJS.png', 11, '2018-06-16 17:42:00.000000', '山歌', '', 3, NULL, '', '');
+INSERT INTO `courses_course` VALUES (7, '蔡依林', '蔡依林本名蔡宜凌，祖籍福建省泉州市 [33]  ，1980年9月15日出生于中国台湾台北县新庄市（现新北市新庄区），在家中排行老二，有一个姐姐，父亲蔡柱陈从事过会计工作；母亲黄春美为人低调，鲜少在媒体面前出现，在台北医院担任志工有十年时间 [34]  。蔡依林毕业于景美女中、并以保送方式进入辅仁大学英文系就读，与F.I.R乐队女主唱Faye为同班同学。', 'java++++', 'cj', 11, 35, 44, 'courses/2018/06/imooc_Y2Tonsq.png', 44, '2018-06-16 17:42:00.000000', '山歌', 'java', 2, NULL, '', '');
+INSERT INTO `courses_course` VALUES (8, '金泫雅', '1992年6月6日，金泫雅出生于韩国首尔市，中学时曾读于Choong Chun Middle School及Korea High School of Music and Arts（韩国音乐艺术学院），毕业于韩国建国大学电影系，主修艺术文化。', 'js', 'cj', 121, 121, 121, 'courses/2018/06/qhdx-logo_T7wmmyR.png', 1, '2018-06-16 17:43:00.000000', '性感', 'java', 3, NULL, '', '');
+INSERT INTO `courses_course` VALUES (9, '林俊杰', '1981年3月27日，林俊杰出生于新加坡的一个音乐世家。在父母的引导下，4岁就开始学习古典钢琴，不善言辞的他由此发现了另一种与人沟通的语言。小时候的林俊杰把哥哥当作偶像，跟随哥哥的步伐做任何事，直到接触流行音乐后，便爱上创作这一条路。', '3131', 'zj', 13, 131, 33, 'courses/2018/06/bjdx.jpg', 13, '2018-06-16 17:43:00.000000', '山歌', 'java', 4, NULL, '', '');
+INSERT INTO `courses_course` VALUES (10, '王力宏', '1982年，王力宏开始学习小提琴，并坚持每天练琴6小时 [22]  。1984\r\n王力宏\r\n王力宏(3张)\r\n 年，他开始学习钢琴。1988年6月，从Pittsford Elementary School毕业；9月，进入Pittsford Sutherland Middle School就读', '1414141', 'cj', 14, 17, 41, 'courses/2018/06/qhdx-logo_MG2ahnm.png', 14, '2018-06-16 17:43:00.000000', '山歌', '', 5, NULL, '', '');
+INSERT INTO `courses_course` VALUES (11, '2NE1', '2NE1四位成员在YG公司的平均练习时间是3.5年，\r\n而总和则达到了14年。孔敏芝是韩国舞蹈家孔玉珍的侄孙女，她从小学就进入了YG公司，经历了5年的练习生活。朴春则是于2002年与梁贤锡社长见面，经历了屡次面试，终于在2005年进入了YG公司。如果把前前后后的时间都涵盖，朴春的历练时间就是最漫长的。Sandra从菲律宾回到韩国后练习了两年时间，CL [11]  大约是三年。朴春和Sandra在出道时都已经到了25岁', '1111111111111111111111111111111111111111111111111111', 'gj', 12, 21, 32, 'courses/2018/06/4.jpeg', 12, '2018-06-21 09:16:00.000000', '流行', '121', 2, 1, '全栈开发,所向披露', 'python基础你必须要会哦!!!!!');
 
 -- ----------------------------
 -- Table structure for courses_courseresource
@@ -362,7 +364,7 @@ CREATE TABLE `django_migrations`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 43 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 45 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of django_migrations
@@ -399,6 +401,8 @@ INSERT INTO `django_migrations` VALUES (39, 'users', '0004_auto_20180621_1303', 
 INSERT INTO `django_migrations` VALUES (40, 'users', '0005_auto_20180622_0734', '2018-06-22 07:34:32.261021');
 INSERT INTO `django_migrations` VALUES (41, 'users', '0006_auto_20180622_0810', '2018-06-22 08:10:12.674970');
 INSERT INTO `django_migrations` VALUES (42, 'users', '0007_auto_20180622_0811', '2018-06-22 08:12:07.641612');
+INSERT INTO `django_migrations` VALUES (43, 'courses', '0003_auto_20180622_1600', '2018-06-22 16:00:18.114359');
+INSERT INTO `django_migrations` VALUES (44, 'organizations', '0005_auto_20180622_1600', '2018-06-22 16:00:18.219080');
 
 -- ----------------------------
 -- Table structure for django_session
@@ -416,7 +420,7 @@ CREATE TABLE `django_session`  (
 -- Records of django_session
 -- ----------------------------
 INSERT INTO `django_session` VALUES ('dxoldvi0pnjvuq8bho8xprvxdp1wlqyl', 'ODM1ZTI4MmI2MTFhOTA4ODFhODcwOWE3ZDkxZTdlMWNhOWY4ZTBmZjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXNlcnMudmlld3MuQ3VzdG9tQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImMxMDZiY2Y0MjIwNTU0NjE5ZDY0MThmNmVjMzJhYTcxMWY2ZjEzMzgiLCJMSVNUX1FVRVJZIjpbWyJjb3Vyc2VzIiwiY291cnNlIl0sIiJdfQ==', '2018-06-30 19:31:50.415459');
-INSERT INTO `django_session` VALUES ('eop7ylrj07c67ci898lkkdkaxxzolavr', 'ZDBjNTViMTliNzUzOWNjNjRjZDdhYjk4MDI1MGZjNzRmMjBlMmUyMjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXNlcnMudmlld3MuQ3VzdG9tQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImY2M2Y3MTI4Y2ViNDhlOWRiZTQ3YzlhM2MzZjBiYTM3YmFiMDBjMzgiLCJuYXZfbWVudSI6Ilt7XCJ0aXRsZVwiOiBcIlx1NjczYVx1Njc4NFwiLCBcIm1lbnVzXCI6IFt7XCJ0aXRsZVwiOiBcIlx1NTdjZVx1NWUwMlwiLCBcInVybFwiOiBcIi94YWRtaW4vb3JnYW5pemF0aW9ucy9jaXR5ZGljdC9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTF9LCB7XCJ0aXRsZVwiOiBcIlx1OGJmZVx1N2EwYlx1NjczYVx1Njc4NFwiLCBcInVybFwiOiBcIi94YWRtaW4vb3JnYW5pemF0aW9ucy9jb3Vyc2VvcmcvXCIsIFwiaWNvblwiOiBudWxsLCBcIm9yZGVyXCI6IDEyfSwge1widGl0bGVcIjogXCJcdTY1NTlcdTVlMDhcIiwgXCJ1cmxcIjogXCIveGFkbWluL29yZ2FuaXphdGlvbnMvdGVhY2hlci9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTN9XSwgXCJmaXJzdF91cmxcIjogXCIveGFkbWluL29yZ2FuaXphdGlvbnMvY2l0eWRpY3QvXCJ9LCB7XCJ0aXRsZVwiOiBcIlx1NzUyOFx1NjIzN1wiLCBcIm1lbnVzXCI6IFt7XCJ0aXRsZVwiOiBcIlx1NzUyOFx1NjIzN1x1NGZlMVx1NjA2ZlwiLCBcInVybFwiOiBcIi94YWRtaW4vdXNlcnMvdXNlcnByb2ZpbGUvXCIsIFwiaWNvblwiOiBcImZhIGZhLXVzZXJcIiwgXCJvcmRlclwiOiAzfSwge1widGl0bGVcIjogXCJcdTkwYWVcdTdiYjFcdTlhOGNcdThiYzFcdTc4MDFcIiwgXCJ1cmxcIjogXCIveGFkbWluL3VzZXJzL2VtYWlsdmVyaWZ5cmVjb3JkL1wiLCBcImljb25cIjogbnVsbCwgXCJvcmRlclwiOiA1fSwge1widGl0bGVcIjogXCJcdThmNmVcdTY0YWRcdTU2ZmVcIiwgXCJ1cmxcIjogXCIveGFkbWluL3VzZXJzL2Jhbm5lci9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogNn1dLCBcImZpcnN0X2ljb25cIjogXCJmYSBmYS11c2VyXCIsIFwiZmlyc3RfdXJsXCI6IFwiL3hhZG1pbi91c2Vycy91c2VycHJvZmlsZS9cIn0sIHtcInRpdGxlXCI6IFwiXHU3NTI4XHU2MjM3XHU2NGNkXHU0ZjVjXCIsIFwibWVudXNcIjogW3tcInRpdGxlXCI6IFwiXHU3NTI4XHU2MjM3XHU1NGE4XHU4YmUyXCIsIFwidXJsXCI6IFwiL3hhZG1pbi9vcGVyYXRpb25zL3VzZXJhc2svXCIsIFwiaWNvblwiOiBudWxsLCBcIm9yZGVyXCI6IDE0fSwge1widGl0bGVcIjogXCJcdTc1MjhcdTYyMzdcdThiZmVcdTdhMGJcIiwgXCJ1cmxcIjogXCIveGFkbWluL29wZXJhdGlvbnMvdXNlcmNvdXJzZS9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTV9LCB7XCJ0aXRsZVwiOiBcIlx1NzUyOFx1NjIzN1x1NmQ4OFx1NjA2ZlwiLCBcInVybFwiOiBcIi94YWRtaW4vb3BlcmF0aW9ucy91c2VybWVzc2FnZS9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTZ9LCB7XCJ0aXRsZVwiOiBcIlx1OGJmZVx1N2EwYlx1OGJjNFx1OGJiYVwiLCBcInVybFwiOiBcIi94YWRtaW4vb3BlcmF0aW9ucy9jb3Vyc2Vjb21tZW50cy9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTd9LCB7XCJ0aXRsZVwiOiBcIlx1NzUyOFx1NjIzN1x1NjUzNlx1ODVjZlwiLCBcInVybFwiOiBcIi94YWRtaW4vb3BlcmF0aW9ucy91c2VyZmF2b3JpdGUvXCIsIFwiaWNvblwiOiBudWxsLCBcIm9yZGVyXCI6IDE4fV0sIFwiZmlyc3RfdXJsXCI6IFwiL3hhZG1pbi9vcGVyYXRpb25zL3VzZXJhc2svXCJ9LCB7XCJ0aXRsZVwiOiBcIlx1N2JhMVx1NzQwNlwiLCBcIm1lbnVzXCI6IFt7XCJ0aXRsZVwiOiBcIlx1NjVlNVx1NWZkN1x1OGJiMFx1NWY1NVwiLCBcInVybFwiOiBcIi94YWRtaW4veGFkbWluL2xvZy9cIiwgXCJpY29uXCI6IFwiZmEgZmEtY29nXCIsIFwib3JkZXJcIjogMjB9XSwgXCJmaXJzdF9pY29uXCI6IFwiZmEgZmEtY29nXCIsIFwiZmlyc3RfdXJsXCI6IFwiL3hhZG1pbi94YWRtaW4vbG9nL1wifSwge1widGl0bGVcIjogXCJcdThiYTRcdThiYzFcdTU0OGNcdTYzODhcdTY3NDNcIiwgXCJtZW51c1wiOiBbe1widGl0bGVcIjogXCJcdTdlYzRcIiwgXCJ1cmxcIjogXCIveGFkbWluL2F1dGgvZ3JvdXAvXCIsIFwiaWNvblwiOiBcImZhIGZhLWdyb3VwXCIsIFwib3JkZXJcIjogMn0sIHtcInRpdGxlXCI6IFwiXHU2NzQzXHU5NjUwXCIsIFwidXJsXCI6IFwiL3hhZG1pbi9hdXRoL3Blcm1pc3Npb24vXCIsIFwiaWNvblwiOiBcImZhIGZhLWxvY2tcIiwgXCJvcmRlclwiOiA0fV0sIFwiZmlyc3RfaWNvblwiOiBcImZhIGZhLWdyb3VwXCIsIFwiZmlyc3RfdXJsXCI6IFwiL3hhZG1pbi9hdXRoL2dyb3VwL1wifSwge1widGl0bGVcIjogXCJcdThiZmVcdTdhMGJcIiwgXCJtZW51c1wiOiBbe1widGl0bGVcIjogXCJcdThiZmVcdTdhMGJcIiwgXCJ1cmxcIjogXCIveGFkbWluL2NvdXJzZXMvY291cnNlL1wiLCBcImljb25cIjogbnVsbCwgXCJvcmRlclwiOiA3fSwge1widGl0bGVcIjogXCJcdTdhZTBcdTgyODJcIiwgXCJ1cmxcIjogXCIveGFkbWluL2NvdXJzZXMvbGVzc29uL1wiLCBcImljb25cIjogbnVsbCwgXCJvcmRlclwiOiA4fSwge1widGl0bGVcIjogXCJcdTg5YzZcdTk4OTFcIiwgXCJ1cmxcIjogXCIveGFkbWluL2NvdXJzZXMvdmlkZW8vXCIsIFwiaWNvblwiOiBudWxsLCBcIm9yZGVyXCI6IDl9LCB7XCJ0aXRsZVwiOiBcIlx1OGJmZVx1N2EwYlx1OGQ0NFx1NmU5MFwiLCBcInVybFwiOiBcIi94YWRtaW4vY291cnNlcy9jb3Vyc2VyZXNvdXJjZS9cIiwgXCJpY29uXCI6IG51bGwsIFwib3JkZXJcIjogMTB9XSwgXCJmaXJzdF91cmxcIjogXCIveGFkbWluL2NvdXJzZXMvY291cnNlL1wifV0iLCJMSVNUX1FVRVJZIjpbWyJvcmdhbml6YXRpb25zIiwiY291cnNlb3JnIl0sIiJdfQ==', '2018-07-06 14:53:16.170509');
+INSERT INTO `django_session` VALUES ('lb2yyy20wy4sldzchwu8vxmx9wkl9cy7', 'NzdkNzM3Y2JhODQ4ZDU5ZWU5NTNjOWJkMjllMTdkYjRkYTBkZWZlMjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXNlcnMudmlld3MuQ3VzdG9tQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImY2M2Y3MTI4Y2ViNDhlOWRiZTQ3YzlhM2MzZjBiYTM3YmFiMDBjMzgifQ==', '2018-07-06 16:13:31.942766');
 
 -- ----------------------------
 -- Table structure for operations_coursecomments
@@ -584,18 +588,16 @@ CREATE TABLE `organizations_courseorg`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `organizations_course_city_id_d828a591_fk_organizat`(`city_id`) USING BTREE,
   CONSTRAINT `organizations_course_city_id_d828a591_fk_organizat` FOREIGN KEY (`city_id`) REFERENCES `organizations_citydict` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of organizations_courseorg
 -- ----------------------------
-INSERT INTO `organizations_courseorg` VALUES (1, '1', '老男孩教育隶属于北京一天天教育科技有限公司，旗下有两大业务，老男孩linux培训和IT项目服务部，是国内唯一专注于Linux系统及架构师实战方向高端的培训机构与项目外包的企业，公司一方面致力于为国内国际大中型互联网企业培养急需的系统工程师，高级架构师，系统开发工程师等职位，一方面为企业提供企业级的各类高端技术培训，技术咨询，技术流程，技术规划，技术架构及调优方案，并参与实施于后期维护，把互联网的成熟技术经验带到传统行业领域。\r\n\r\n      公司在IT培训方面教学理念先进，方法独特，其中的4项学习思想方针（目标、方法、努力、坚持）和6重教学理念（重目标、重思路、重方法、重实践、重习惯、重总结）已深入广大IT网友及所有学员的内心，逐步形成了互联网IT行业内教育经典。\r\n\r\n      截止到目前累计已培养数千VIP学生，间接影响百万的IT群体，毕业生平均工资在毕业一年内平均12K以上，老男孩培训的学生已经遍布于很多就职于北京大部分知名互联网企业，小米手机，京东商城，蓝讯，快网，淘宝，阿里，支付宝，新浪网，搜狐，腾讯，58同城，赶集，和讯，世纪佳缘，当当网，中国移动，中国联通等，也有很多在中小公司任核心运维及运维经理总监职位（寻医问药总监，互动百科总监，盈科律云总监，合力金桥总监等，），累计为行内其他的培训机构讲师深入培训20人以上。', 71, 1113, 'org/201806/qhdx-logo.png', '北京', '2018-06-15 09:41:00.000000', 4, 'gx', 9, 0);
-INSERT INTO `organizations_courseorg` VALUES (2, '2', '传智播客', 16, 33, 'org/2018/06/njdx.jpg', '湖北', '2018-06-15 09:50:00.000000', 3, 'gx', 9, 0);
-INSERT INTO `organizations_courseorg` VALUES (3, '3', '文都', 234, 4444, 'org/2018/06/bjdx.jpg', '湖北', '2018-06-15 09:51:00.000000', 1, 'gr', 1111111111, 0);
-INSERT INTO `organizations_courseorg` VALUES (4, '4', '培训', 3333, 33, 'org/2018/06/imooc_Gn1sRjp.png', '湖北', '2018-06-15 09:52:00.000000', 2, 'gr', 9, 0);
+INSERT INTO `organizations_courseorg` VALUES (1, '1', '老男孩教育隶属于北京一天天教育科技有限公司，旗下有两大业务，老男孩linux培训和IT项目服务部，是国内唯一专注于Linux系统及架构师实战方向高端的培训机构与项目外包的企业，公司一方面致力于为国内国际大中型互联网企业培养急需的系统工程师，高级架构师，系统开发工程师等职位，一方面为企业提供企业级的各类高端技术培训，技术咨询，技术流程，技术规划，技术架构及调优方案，并参与实施于后期维护，把互联网的成熟技术经验带到传统行业领域。\r\n\r\n      公司在IT培训方面教学理念先进，方法独特，其中的4项学习思想方针（目标、方法、努力、坚持）和6重教学理念（重目标、重思路、重方法、重实践、重习惯、重总结）已深入广大IT网友及所有学员的内心，逐步形成了互联网IT行业内教育经典。\r\n\r\n      截止到目前累计已培养数千VIP学生，间接影响百万的IT群体，毕业生平均工资在毕业一年内平均12K以上，老男孩培训的学生已经遍布于很多就职于北京大部分知名互联网企业，小米手机，京东商城，蓝讯，快网，淘宝，阿里，支付宝，新浪网，搜狐，腾讯，58同城，赶集，和讯，世纪佳缘，当当网，中国移动，中国联通等，也有很多在中小公司任核心运维及运维经理总监职位（寻医问药总监，互动百科总监，盈科律云总监，合力金桥总监等，），累计为行内其他的培训机构讲师深入培训20人以上。', 71, 1113, 'org/201806/qhdx-logo.png', '中国', '2018-06-15 09:41:00.000000', 4, 'gx', 9, 0);
+INSERT INTO `organizations_courseorg` VALUES (2, '2', '传智播客', 16, 33, 'org/2018/06/njdx.jpg', '韩国', '2018-06-15 09:50:00.000000', 3, 'gx', 9, 0);
+INSERT INTO `organizations_courseorg` VALUES (3, '3', '文都', 234, 4444, 'org/2018/06/bjdx.jpg', '欧美', '2018-06-15 09:51:00.000000', 1, 'gr', 1111111111, 0);
+INSERT INTO `organizations_courseorg` VALUES (4, '4', '培训', 3333, 33, 'org/2018/06/imooc_Gn1sRjp.png', '非洲', '2018-06-15 09:52:00.000000', 2, 'gr', 9, 0);
 INSERT INTO `organizations_courseorg` VALUES (5, '5', '黑马', 3, 1, 'org/2018/06/bjdx_cCpdUw8.jpg', '湖北', '2018-06-15 09:55:00.000000', 2, 'gr', 9, 0);
-INSERT INTO `organizations_courseorg` VALUES (6, '6', '北京大学（Peking University）简称“北大”，诞生于1898年，初名京师大学堂，是中国近代第一所国立大学，也是最早以“大学”之名创办的学校，其成立标志着中国近代高等教育的开端。北大是中国近代以来唯一以国家最高学府身份创立的学校，最初也是国家最高教育行政机关，行使教育部职能，统管全国教育。北大催生了中国最早的现代学制，开创了中国最早的文科、理科、社科、农科、医科等大学学科，是近代以来中国高等教育的奠基者 [1-3]  。\r\n1912年5月3日，京师大学堂改称北京大学校，严复为首任校长 [4]  。1917年，蔡元培出任校长，“循思想自由原则、取兼容并包之义”，把北大办成全国学术和思想中心，使北大成为新文化运动中心、五四运动策源地。1937年抗日战争爆发，北大与清华大学、南开大学南迁长沙，组成国立长沙临时大学。不久迁往昆明，改称国立西南联合大学。1946年10月在北平复学 [5]  。\r\n北大由教育部直属，中央直管副部级建制，是国家双一流 [6]  、211工程、985工程 [5]  、2011计划重点建设的全国重点大学，九校联盟 [7]  、中国大学校长联谊会、京港大学联盟 [8]  、亚洲大学联盟 [9]  、东亚研究型大学协会、国际研究型大学联盟、环太平洋大学联盟、东亚四大学论坛、国际公立大学论坛、中俄综合性大学联盟重要成员。 [10-13] \r\n北大始终与国家民族的命运紧密相连，聚集了许多学者专家，培养了众多优秀人才，创造了大批重大科学成果，影响和推动了中国近现代思想理论、科学技术、文化教育和社会发展的进程。', 2, 31, 'org/2018/06/bjdx_cCpdUw8_o9RyO13.jpg', '北京', '2018-06-15 09:55:00.000000', 3, 'gr', 9, 0);
-INSERT INTO `organizations_courseorg` VALUES (7, '7', '北京大学（Peking University）简称“北大”，诞生于1898年，初名京师大学堂，是中国近代第一所国立大学，也是最早以“大学”之名创办的学校，其成立标志着中国近代高等教育的开端。北大是中国近代以来唯一以国家最高学府身份创立的学校，最初也是国家最高教育行政机关，行使教育部职能，统管全国教育。北大催生了中国最早的现代学制，开创了中国最早的文科、理科、社科、农科、医科等大学学科，是近代以来中国高等教育的奠基者 [1-3]  。\r\n1912年5月3日，京师大学堂改称北京大学校，严复为首任校长 [4]  。1917年，蔡元培出任校长，“循思想自由原则、取兼容并包之义”，把北大办成全国学术和思想中心，使北大成为新文化运动中心、五四运动策源地。1937年抗日战争爆发，北大与清华大学、南开大学南迁长沙，组成国立长沙临时大学。不久迁往昆明，改称国立西南联合大学。1946年10月在北平复学 [5]  。\r\n北大由教育部直属，中央直管副部级建制，是国家双一流 [6]  、211工程、985工程 [5]  、2011计划重点建设的全国重点大学，九校联盟 [7]  、中国大学校长联谊会、京港大学联盟 [8]  、亚洲大学联盟 [9]  、东亚研究型大学协会、国际研究型大学联盟、环太平洋大学联盟、东亚四大学论坛、国际公立大学论坛、中俄综合性大学联盟重要成员。 [10-13] \r\n北大始终与国家民族的命运紧密相连，聚集了许多学者专家，培养了众多优秀人才，创造了大批重大科学成果，影响和推动了中国近现代思想理论、科学技术、文化教育和社会发展的进程。', 333333, 0, 'org/2018/06/bjdx_cCpdUw8_hQ7hSBC.jpg', '湖北', '2018-06-15 09:55:00.000000', 2, 'gr', 9, 0);
 
 -- ----------------------------
 -- Table structure for organizations_teacher
@@ -616,15 +618,16 @@ CREATE TABLE `organizations_teacher`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `organizations_teache_org_id_c716b697_fk_organizat`(`org_id`) USING BTREE,
   CONSTRAINT `organizations_teache_org_id_c716b697_fk_organizat` FOREIGN KEY (`org_id`) REFERENCES `organizations_courseorg` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of organizations_teacher
 -- ----------------------------
-INSERT INTO `organizations_teacher` VALUES (1, 'Donnie', 10, 'Alibaba', '架构师', 'xxxxxxxxxxxxxxxxxxxx', 24, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/1.jpg');
-INSERT INTO `organizations_teacher` VALUES (2, 'Donnie_x', 3, 'Alibaba', '架构师', 'xxxxxxxxxxxxxxxxxxxx', 0, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/bjdx_bcd0m07.jpg');
-INSERT INTO `organizations_teacher` VALUES (3, 'boo', 2, 'Baidu', 'xxxxxxxxxxxxx', 'xxxxxxxxxxxxxxx', 0, 0, '2018-06-15 15:21:00.000000', 4, 'teacher/2018/06/bjdx_Go3ItLB.jpg');
-INSERT INTO `organizations_teacher` VALUES (4, '1212', 12, '1212', '121额', '2额2', 3, 0, '2018-06-16 08:48:00.000000', 1, 'teacher/2018/06/bjdx.jpg');
+INSERT INTO `organizations_teacher` VALUES (1, 'SM', 10, '韩国', '娱乐', 'xxxxxxxxxxxxxxxxxxxx', 26, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/1.jpg');
+INSERT INTO `organizations_teacher` VALUES (2, 'YG', 3, '韩国', '娱乐', 'xxxxxxxxxxxxxxxxxxxx', 0, 0, '2018-06-15 15:21:00.000000', 2, 'teacher/2018/06/bjdx_bcd0m07.jpg');
+INSERT INTO `organizations_teacher` VALUES (3, 'JYP', 2, '韩国', '娱乐', 'xxxxxxxxxxxxxxx', 0, 0, '2018-06-15 15:21:00.000000', 4, 'teacher/2018/06/bjdx_Go3ItLB.jpg');
+INSERT INTO `organizations_teacher` VALUES (4, 'Mnet', 12, '韩国', '娱乐', '2额2', 3, 0, '2018-06-16 08:48:00.000000', 1, 'teacher/2018/06/bjdx.jpg');
+INSERT INTO `organizations_teacher` VALUES (5, 'DSP', 12, '韩国', '娱乐', '1', 1, 1, '2018-06-13 16:20:59.000000', 3, '');
 
 -- ----------------------------
 -- Table structure for users_banner
@@ -714,7 +717,7 @@ CREATE TABLE `users_userprofile`  (
 -- ----------------------------
 -- Records of users_userprofile
 -- ----------------------------
-INSERT INTO `users_userprofile` VALUES (3, 'pbkdf2_sha256$100000$2h4S5mjy9RX5$w5g3ov31r6HGNdLQPxUY0gfaPspAXLSVCacZqkcS+H0=', '2018-06-22 13:09:00.297026', 1, 'admin', '', '', '369306126@qq.com', 1, 1, '2018-06-14 16:08:06.102436', 'demo1', '2018-05-28', 'male', 'jianganqu', '12345678910', 'image/201806/4.jpeg');
+INSERT INTO `users_userprofile` VALUES (3, 'pbkdf2_sha256$100000$2h4S5mjy9RX5$w5g3ov31r6HGNdLQPxUY0gfaPspAXLSVCacZqkcS+H0=', '2018-06-22 16:13:31.939285', 1, 'admin', '', '', '369306126@qq.com', 1, 1, '2018-06-14 16:08:06.102436', 'demo1', '2018-05-28', 'male', 'jianganqu', '12345678910', 'image/201806/4.jpeg');
 INSERT INTO `users_userprofile` VALUES (7, 'pbkdf2_sha256$100000$urIOx4KgvO4s$+qbDXUAHN/6Hd1jvnySQof0zS2OMCjwEG7KZCNYZQx8=', NULL, 0, 'donnie0918@sina.com', '', '', 'admin123', 0, 1, '2018-06-14 19:18:43.472329', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
 INSERT INTO `users_userprofile` VALUES (8, 'pbkdf2_sha256$100000$7yzXaqzS3CTx$LUCn125GFLMkw380LAdhxWYbdIu1IR+w+tlLQSMQEAA=', NULL, 0, '123@1.com', '', '', '123@1.com', 0, 0, '2018-06-14 20:51:06.528427', '', NULL, 'female', '', NULL, 'courses/2018/06/qhdx-logo_TLwBVJS.png');
 INSERT INTO `users_userprofile` VALUES (9, 'pbkdf2_sha256$100000$wuCZVebTY86N$o0qUk5v09pyHui0j14fhug+bkrfT2JDZk8TiivIMkpQ=', NULL, 0, '123@123.com', '', '', '123@123.com', 0, 0, '2018-06-14 20:54:01.113308', '', NULL, 'female', '', '', 'image/default.pngcourses/2018/06/qhdx-logo_TLwBVJS.png');

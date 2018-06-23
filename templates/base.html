@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
-	<title>{% block title %}课程机构列表 - 慕学在线网{% endblock %}</title>
+	<title>{% block title %}公司列表{% endblock %}</title>
 	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
@@ -58,12 +58,12 @@
                     <div class="searchbox fr">
                         <div class="selectContainer fl">
                             <span class="selectOption" id="jsSelectOption" data-value="course">
-                                公开课
+                                艺人
                             </span>
                             <ul class="selectMenu" id="jsSelectMenu">
-                                <li data-value="course">公开课</li>
-                                <li data-value="org">课程机构</li>
-                                <li data-value="teacher">授课老师</li>
+                                <li data-value="course">艺人</li>
+                                <li data-value="org">公司</li>
+                                <li data-value="teacher">国家地区</li>
                             </ul>
                         </div>
                         <input id="search_keywords" class="fl" type="text" value="" placeholder="请输入搜索内容"/>
@@ -81,14 +81,14 @@
                                     href="{% url 'index' %}">首页</a></li>
                             <li {% if request.path|slice:'7' == '/course/list' %}class="active"{% endif %}>
                                 <a href="{% url 'course:course_list' %}">
-                                    公开课<img class="hot" src="{% static 'images/nav_hot.png' %}">
+                                    艺人<img class="hot" src="{% static 'images/nav_hot.png' %}">
                                 </a>
                             </li>
                             <li {% if request.path|slice:'12' == '/org/teacher' %}class="active"{% endif %}>
-                                <a href="{% url "org:teacher_list" %}">授课教师</a>
+                                <a href="{% url "org:teacher_list" %}">公司</a>
                             </li>
                             <li {% if request.path|slice:'9' == '/org/list' %}class="active" {% endif %}><a
-                                    href="{% url 'org:org_list' %}">授课机构</a></li>
+                                    href="{% url 'org:org_list' %}">国家地区</a></li>
 						</ul>
 					</div>
 				</div>
